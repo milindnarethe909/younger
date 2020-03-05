@@ -586,6 +586,13 @@ public class HomeFragment extends BaseAppFragment implements View.OnClickListene
 
                     boolean status = object.getBoolean("status");
 
+
+
+
+
+
+
+
                     if (status == true){
                         JSONArray jsonArray = object.getJSONArray("brands_banners");
 
