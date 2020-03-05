@@ -3,23 +3,40 @@ package com.youngershopping.ui.home.ui1;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ExpandableListView;
+import android.widget.Toast;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.android.volley.NoConnectionError;
+import com.android.volley.ParseError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.TimeoutError;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.youngershopping.BaseApp;
 import com.youngershopping.R;
 import com.youngershopping.SharPref.SharePref;
+import com.youngershopping.adapter.home.HomeDataBestSellingAdapter;
 import com.youngershopping.adapter.home.category.expandable.CategoryExpandableListAdapter;
 import com.youngershopping.adapter.home.category.HomeCategoryDataPopularAdapter;
 import com.youngershopping.databinding.ActivityHomecategoryBinding;
 import com.youngershopping.pojo.ChildCategory;
 import com.youngershopping.pojo.ParentCategory;
+import com.youngershopping.pojo.best_seller_pojo;
 import com.youngershopping.ui.product.ProductListActivity;
 import com.youngershopping.utils.Constants;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,7 +49,7 @@ public class HomeCategoryActivity extends BaseApp implements View.OnClickListene
     private CategoryExpandableListAdapter adapter;
     private HomeCategoryDataPopularAdapter homeCategoryDataPopularAdapter;
     private List<Integer> listhomeCategoryDataPopular;
-
+    private List<best_seller_pojo> listHomeDataBestSelling;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +65,7 @@ public class HomeCategoryActivity extends BaseApp implements View.OnClickListene
     private void init() {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+//        getSupportActionBar().setTitle("RAM");
 
         binding.commanRecyclerviewPopular.recyclerView.setLayoutManager(new LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false));
         fillData();
@@ -62,16 +80,19 @@ public class HomeCategoryActivity extends BaseApp implements View.OnClickListene
     }
 
     private void fillData() {
-        listhomeCategoryDataPopular = new ArrayList<>();
-        listhomeCategoryDataPopular.add(R.mipmap.camera1);
-        listhomeCategoryDataPopular.add(R.mipmap.camera2);
-        listhomeCategoryDataPopular.add(R.mipmap.camera3);
-        listhomeCategoryDataPopular.add(R.mipmap.camera4);
-        listhomeCategoryDataPopular.add(R.mipmap.camera5);
-        listhomeCategoryDataPopular.add(R.mipmap.camera6);
-        listhomeCategoryDataPopular.add(R.mipmap.camera7);
-        homeCategoryDataPopularAdapter = new HomeCategoryDataPopularAdapter(activity, listhomeCategoryDataPopular);
-        binding.commanRecyclerviewPopular.recyclerView.setAdapter(homeCategoryDataPopularAdapter);
+        binding.linearPopular.setVisibility(View.GONE);
+        listHomeDataBestSelling = new ArrayList<>();
+        getBestSeller();
+//        listhomeCategoryDataPopular = new ArrayList<>();
+//        listhomeCategoryDataPopular.add(R.mipmap.camera1);
+//        listhomeCategoryDataPopular.add(R.mipmap.camera2);
+//        listhomeCategoryDataPopular.add(R.mipmap.camera3);
+//        listhomeCategoryDataPopular.add(R.mipmap.camera4);
+//        listhomeCategoryDataPopular.add(R.mipmap.camera5);
+//        listhomeCategoryDataPopular.add(R.mipmap.camera6);
+//        listhomeCategoryDataPopular.add(R.mipmap.camera7);
+//        homeCategoryDataPopularAdapter = new HomeCategoryDataPopularAdapter(activity, listhomeCategoryDataPopular);
+//        binding.commanRecyclerviewPopular.recyclerView.setAdapter(homeCategoryDataPopularAdapter);
     }
 
 
@@ -93,7 +114,7 @@ public class HomeCategoryActivity extends BaseApp implements View.OnClickListene
         Intent intent;
         switch (view.getId()) {
             case R.id.btnSeeAll:
-                SharePref.setProductId("product_id","72",getApplicationContext());
+//                SharePref.setProductId("product_id","72",getApplicationContext());
                 intent = new Intent(activity, ProductListActivity.class);
                 intent.putExtra(Constants.from, getResources().getString(R.string.PopularProduct));
                 startActivity(intent);
@@ -276,4 +297,90 @@ public class HomeCategoryActivity extends BaseApp implements View.OnClickListene
 //            }
 //        });
     }
+
+    private void getBestSeller() {
+        StringRequest request = new StringRequest(Request.Method.GET, Constants.propulare_product, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                JSONObject object = null;
+                try {
+                    object = new JSONObject(response);
+
+                    Log.d("TAG","Response Best Seller List = "+response);
+
+                    boolean status = object.getBoolean("status");
+
+                    listHomeDataBestSelling.clear();
+
+                    if (status == true){
+                        JSONArray jsonArray = object.getJSONArray("data");
+                        binding.linearPopular.setVisibility(View.VISIBLE);
+                        int leg = jsonArray.length();
+                        if (leg<6){
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                JSONObject object1 = jsonArray.getJSONObject(i);
+
+                                String category_id = "";
+                                String subcategory_id = "";
+                                String product_name = object1.getString("name");
+                                String product_image = object1.getString("photo");
+                                String product_id = object1.getString("id");
+                                String price = object1.getString("price");
+                                String cprice = object1.getString("cprice");
+                                double rat = object1.getDouble("rating");
+                                int stock = 0;
+                                String childcategory_id = "";
+
+                                listHomeDataBestSelling.add(new best_seller_pojo(category_id, childcategory_id, cprice, price, product_id, product_image, product_name, subcategory_id, rat, stock));
+                            }
+                        }else {
+                            for (int i = 0; i < 6; i++) {
+                                JSONObject object1 = jsonArray.getJSONObject(i);
+
+                                String category_id = "";
+                                String subcategory_id = "";
+                                String product_name = object1.getString("name");
+                                String product_image = object1.getString("photo");
+                                String product_id = object1.getString("id");
+                                String price = object1.getString("price");
+                                String cprice = object1.getString("cprice");
+                                double rat = object1.getDouble("rating");
+                                int stock = 0;
+                                String childcategory_id = "";
+
+                                listHomeDataBestSelling.add(new best_seller_pojo(category_id, childcategory_id, cprice, price, product_id, product_image, product_name, subcategory_id, rat, stock));
+                            }
+                        }
+
+                        HomeDataBestSellingAdapter homeDataBestSellingAdapter = new HomeDataBestSellingAdapter(activity, listHomeDataBestSelling);
+                        binding.commanRecyclerviewPopular.recyclerView.setAdapter(homeDataBestSellingAdapter);
+
+
+
+                    }
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d(TAG,"Edit Profile Error = "+error.getMessage());
+                if (error instanceof NoConnectionError){
+                    Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
+                }else if (error instanceof TimeoutError){
+                    Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
+                }else if (error instanceof ParseError){
+                    Toast.makeText(getApplicationContext(),"Parse Error",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        queue.add(request);
+    }
+
 }

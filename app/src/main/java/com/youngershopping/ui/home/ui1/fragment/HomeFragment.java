@@ -40,6 +40,7 @@ import com.youngershopping.adapter.home.HomeDataCategoryAdapter;
 import com.youngershopping.adapter.home.HomeDataNewArrivalAdapter;
 import com.youngershopping.adapter.home.HomeDataSaleAdapter;
 import com.youngershopping.adapter.home.HomePagerAdapter;
+import com.youngershopping.adapter.home.HomePagerAdapter1;
 import com.youngershopping.connection_internet.InternetConnection;
 import com.youngershopping.databinding.DialogSupportBinding;
 import com.youngershopping.databinding.FragmentHomeBinding;
@@ -101,6 +102,7 @@ public class HomeFragment extends BaseAppFragment implements View.OnClickListene
     private List<String> listHomeDataCategoryLable;
 
     private ArrayList<String> bannerlist;
+    private ArrayList<String> bannerlist1;
     android.app.AlertDialog.Builder builder;
 
     public HomeFragment() {
@@ -208,6 +210,7 @@ public class HomeFragment extends BaseAppFragment implements View.OnClickListene
     private void fillData() {
 
         bannerlist = new ArrayList<>();
+        bannerlist1 = new ArrayList<>();
         listHomeDataBrands = new ArrayList<>();
         listHomeDataNewArrival = new ArrayList<>();
         listHomeDataBestSelling = new ArrayList<>();
@@ -371,7 +374,7 @@ public class HomeFragment extends BaseAppFragment implements View.OnClickListene
                 }
                 else
                 {
-                    if (currentPage1<bannerlist.size()) {
+                    if (currentPage1<bannerlist1.size()) {
                         ++currentPage1;
                         Log.d("TAG","Count yes = "+currentPage1);
                     }else{
@@ -587,12 +590,6 @@ public class HomeFragment extends BaseAppFragment implements View.OnClickListene
                     boolean status = object.getBoolean("status");
 
 
-
-
-
-
-
-
                     if (status == true){
                         JSONArray jsonArray = object.getJSONArray("brands_banners");
 
@@ -660,7 +657,8 @@ public class HomeFragment extends BaseAppFragment implements View.OnClickListene
                         Log.d("TAG","List Banner Size = "+bannerlist.size());
                         homePagerAdapter = new HomePagerAdapter(bannerlist,activity);
                         binding.viewPager.setAdapter(homePagerAdapter);
-                        binding.viewPager1.setAdapter(homePagerAdapter);
+                        getBanner1();
+//                        binding.viewPager1.setAdapter(homePagerAdapter);
 
                     }
 
@@ -686,6 +684,58 @@ public class HomeFragment extends BaseAppFragment implements View.OnClickListene
         RequestQueue queue = Volley.newRequestQueue(getActivity());
         queue.add(request);
     }
+
+
+    private void getBanner1() {
+        StringRequest request = new StringRequest(Request.Method.GET, Constants.banner_offer, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                JSONObject object = null;
+
+                try {
+                    object = new JSONObject(response);
+
+                    Log.d("TAG","Response Bannerb = "+response);
+
+                    boolean status = object.getBoolean("status");
+
+                    if (status == true){
+                        JSONArray jsonArray = object.getJSONArray("data");
+
+                        for (int i = 0;i<jsonArray.length();i++){
+                            JSONObject object1 = jsonArray.getJSONObject(i);
+                            bannerlist1.add(object1.getString("image"));
+                        }
+                        Log.d("TAG","List Banner Size = "+bannerlist1.size());
+                        HomePagerAdapter1 homePagerAdapter1 = new HomePagerAdapter1(bannerlist1,activity);
+                        binding.viewPager1.setAdapter(homePagerAdapter1);
+
+                    }
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d(TAG,"Edit Profile Error = "+error.getMessage());
+                if (error instanceof NoConnectionError){
+                    Toast.makeText(getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
+                }else if (error instanceof TimeoutError){
+                    Toast.makeText(getContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
+                }else if (error instanceof ParseError){
+                    Toast.makeText(getContext(),"Parse Error",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        RequestQueue queue = Volley.newRequestQueue(getActivity());
+        queue.add(request);
+    }
+
 
 
     @Override

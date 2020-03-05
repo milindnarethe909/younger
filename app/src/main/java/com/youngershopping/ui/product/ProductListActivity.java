@@ -187,7 +187,7 @@ public class ProductListActivity extends BaseApp implements ListItemClickInterfa
         }else if (title.equals("Popular Products")){
             SharePref.setwishlist("wish","false",activity);
             Log.d("TAG","Best Seller");
-            getBestSeller();
+            getPropularProduct();
         }else{
             SharePref.setwishlist("wish","false",activity);
             Log.d("TAG","Search = "+SharePref.getwishlist("wish",activity));
@@ -269,6 +269,72 @@ public class ProductListActivity extends BaseApp implements ListItemClickInterfa
             binding.floatMenu.setVisibility(View.GONE);
         }
 
+    }
+
+    private void getPropularProduct() {
+        StringRequest request = new StringRequest(Request.Method.GET, Constants.propulare_product, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                JSONObject object = null;
+                try {
+                    object = new JSONObject(response);
+                    Log.d("TAG","Response Best List = "+response);
+                    boolean status = object.getBoolean("status");
+                    listHomeDataNewArrival = new ArrayList<>();
+
+                    if (status == true){
+                        JSONArray jsonArray = object.getJSONArray("data");
+
+
+                        int leg = jsonArray.length();
+
+                        listHomeDataNewArrival.clear();
+                        for (int i = 0; i < jsonArray.length(); i++) {
+                            JSONObject object1 = jsonArray.getJSONObject(i);
+                            String category_id = "";
+                            String subcategory_id = "";
+                            String product_name = object1.getString("name");
+                            String product_image = object1.getString("photo");
+                            String product_id = object1.getString("id");
+                            int price = object1.getInt("price");
+                            int cprice = object1.getInt("cprice");
+                            double rat = object1.getDouble("rating");
+                            int stock = 0;
+                            String childcategory_id = "";
+
+                            listHomeDataNewArrival.add(new new_arrival_list_pojo(category_id, childcategory_id, cprice, price, product_id, product_image, product_name, subcategory_id, rat, stock));
+                        }
+
+
+                        productListAdapter = new ProductListAdapter(activity, listHomeDataNewArrival, layoutType);
+                        binding.commanRecyclerview.recyclerView.setAdapter(productListAdapter);
+
+                        Log.d("TAG","New arrival List Size = "+listHomeDataNewArrival.size());
+
+                    }
+
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.d(TAG,"Edit Profile Error = "+error.getMessage());
+                if (error instanceof NoConnectionError){
+                    Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
+                }else if (error instanceof TimeoutError){
+                    Toast.makeText(getApplicationContext(),"No Internet Connection",Toast.LENGTH_SHORT).show();
+                }else if (error instanceof ParseError){
+                    Toast.makeText(getApplicationContext(),"Parse Error",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        queue.add(request);
     }
 
     private void getSearchData() {

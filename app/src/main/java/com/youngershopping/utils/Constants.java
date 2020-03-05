@@ -73,7 +73,10 @@ public class Constants {
 
     public static final String search_api = BASE_URL+"young_apie/index.php/post/searchMain";
 
+    public static final String banner_offer = BASE_URL+"young_apie/index.php/get/get_offers";
 
+
+    public static final String propulare_product = BASE_URL+"young_apie/index.php/get/get_popular_products";
 
 
 }

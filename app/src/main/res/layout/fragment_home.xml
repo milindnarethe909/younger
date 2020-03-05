@@ -124,7 +124,7 @@
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/viewPager1"
                     android:layout_width="fill_parent"
-                    android:layout_height="@dimen/_80sdp"
+                    android:layout_height="@dimen/_50sdp"
                     android:layout_marginTop="@dimen/_2sdp"
                     android:layout_marginBottom="@dimen/_4sdp"
                     android:overScrollMode="never"

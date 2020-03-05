@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.youngershopping.R;
 import com.youngershopping.SharPref.SharePref;
 import com.youngershopping.databinding.RawHomedataBinding;
+import com.youngershopping.pojo.best_seller_pojo;
 import com.youngershopping.ui.product.ProductDetailActivity;
 import com.youngershopping.utils.Utils;
 
@@ -27,7 +28,7 @@ public class HomeCategoryDataPopularAdapter extends RecyclerView.Adapter<HomeCat
     private List<Integer> mListData;
     private List<String> mListDatatemp;
     private Activity activity;
-
+    private List<best_seller_pojo> listHomeDataBestSelling;
     public HomeCategoryDataPopularAdapter(Activity con, List<Integer> mListData) {
         this.activity = con;
         this.mListData = mListData;

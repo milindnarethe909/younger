@@ -1,6 +1,7 @@
 package com.youngershopping.adapter.home.category.expandable;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +53,7 @@ public class CategoryExpandableListAdapter extends BaseExpandableListAdapter {
                 R.layout.raw_category_child, parent, false);
 
         String groupname = header.get(groupPosition).Title;
+        Log.d("TAG","Header Title = "+groupname);
         SubCategoryExpandableListAdapter sbc = new SubCategoryExpandableListAdapter(_context,
                 child, groupPosition, groupname);
         binding.recyclerView.setLayoutManager(new GridLayoutManager(_context, 4));

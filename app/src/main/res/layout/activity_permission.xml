@@ -8,18 +8,18 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            fontPath="@string/semibold"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:padding="@dimen/_8sdp"
-            android:text="@string/appSlug"
-            android:textColor="@color/black"
-            android:textSize="@dimen/_12sdp"
-            />
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            fontPath="@string/semibold"-->
+<!--            android:layout_width="fill_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="@dimen/_8sdp"-->
+<!--            android:text="@string/appSlug"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="@dimen/_12sdp"-->
+<!--            android:visibility="gone"-->
+<!--            />-->
 
 
         <androidx.appcompat.widget.LinearLayoutCompat
