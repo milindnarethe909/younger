@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearSale"
+            android:layout_width="@dimen/_125sdp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_8sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_48sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginLeft="@dimen/_8sdp"
+                app:srcCompat="@mipmap/home_sale" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                fontPath="@string/bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/Flash"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_28sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/Sale"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_22sdp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                fontPath="@string/medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/SaleEnd"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <include
+            android:id="@+id/homedata"
+            layout="@layout/raw_homedata" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>

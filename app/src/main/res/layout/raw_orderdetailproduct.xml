@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_6sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:scaleType="centerInside"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/oneplus1"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/_6sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTitle"
+                    fontPath="@string/medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:text="@string/dummy_oneplus1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtPriceMain"
+                    fontPath="@string/semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:text="@string/dummy_price"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtQuantity"
+                    fontPath="@string/semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtQuantity"
+                    android:textColor="@color/cartbudget"
+                    android:textSize="@dimen/_8sdp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="fill_parent"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:id="@+id/linearReturnReview">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtReturn"
+                        fontPath="@string/semibold"
+                        android:gravity="center"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/btn_orders"
+                        android:text="@string/txtReturn"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_8sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtReview"
+                        fontPath="@string/semibold"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/btn_orders"
+                        android:text="@string/txtReview"
+                        android:textColor="@color/cartbudget"
+                        android:textSize="@dimen/_8sdp" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

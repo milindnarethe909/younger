@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/menu_home2"
+            android:title="@string/Home" />
+        <item
+            android:id="@+id/nav_cart"
+            android:icon="@drawable/menu_cart2"
+            android:title="@string/Cart" />
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/menu_order2"
+            android:title="@string/account_Order" />
+        <item
+            android:id="@+id/nav_address"
+            android:icon="@drawable/menu_addressbook2"
+            android:title="@string/account_Address" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/menu_settings2"
+            android:title="@string/account_Settings" />
+        <item
+            android:id="@+id/nav_wishlist"
+            android:icon="@drawable/menu_wishlist2"
+            android:title="@string/account_Wishlist" />
+        <item
+            android:id="@+id/nav_offer"
+            android:icon="@drawable/menu_offer2"
+            android:title="@string/account_Offers" />
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/menu_notifications2"
+            android:title="@string/account_Notification" />
+    </group>
+    <item android:title="Communicate">
+        <menu>
+            <group
+                android:checkableBehavior="single"
+                android:title="Communicate">
+                <item
+                    android:id="@+id/nav_feedback"
+                    android:icon="@drawable/menu_feedback2"
+                    android:title="@string/account_Feedback" />
+                <item
+                    android:id="@+id/nav_help"
+                    android:icon="@drawable/menu_help_center2"
+                    android:title="@string/account_HelpCenter" />
+                <item
+                    android:id="@+id/nav_terms"
+                    android:icon="@drawable/menu_terms_condition2"
+                    android:title="@string/account_Terms" />
+                <item
+                    android:id="@+id/nav_share"
+                    android:icon="@drawable/menu_share2"
+                    android:title="@string/account_Share" />
+                <item
+                    android:id="@+id/nav_rate"
+                    android:icon="@drawable/menu_rateus2"
+                    android:title="@string/account_Rate" />
+                <item
+                    android:id="@+id/nav_logout"
+                    android:icon="@drawable/menu_logout2"
+                    android:title="@string/account_Logout" />
+            </group>
+
+        </menu>
+    </item>
+
+
+</menu>

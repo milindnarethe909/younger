@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        app:cardCornerRadius="@dimen/_2sdp"
+        app:cardElevation="@dimen/_1sdp"
+        app:cardMaxElevation="@dimen/_1sdp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_title"
+                fontPath="@string/semibold"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingLeft="@dimen/_6sdp"
+                android:paddingRight="@dimen/_6sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_store_ambience"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10sdp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/ll_excellent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_6sdp"
+                    android:tag="0">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_excellent"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        app:srcCompat="@drawable/smily_excellent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_excellent"
+                        fontPath="@string/medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:ellipsize="end"
+                        android:text="@string/txt_excellent"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_9sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/ll_good"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_6sdp"
+                    android:tag="0">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_good"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        app:srcCompat="@drawable/smily_good" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_good"
+                        fontPath="@string/medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:ellipsize="end"
+                        android:text="@string/txt_good"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_9sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/ll_average"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_6sdp"
+                    android:tag="0">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_average"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        app:srcCompat="@drawable/smily_average" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_average"
+                        fontPath="@string/medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:ellipsize="end"
+                        android:text="@string/txt_average"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_9sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/ll_bad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_6sdp"
+                    android:tag="0">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_bad"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        app:srcCompat="@drawable/smily_bad" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_bad"
+                        fontPath="@string/medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:ellipsize="end"
+                        android:text="@string/txt_bad"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_9sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/ll_poor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_6sdp"
+                    android:tag="0">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/img_poor"
+                        android:layout_width="@dimen/_32sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        app:srcCompat="@drawable/smily_poor" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txt_poor"
+                        fontPath="@string/medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:ellipsize="end"
+                        android:text="@string/txt_poor"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_9sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.cardview.widget.CardView>
+</layout>

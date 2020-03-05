@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.account.address.AddAddressActivity">
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/_4sdp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+            <androidx.cardview.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/_2sdp"
+                app:cardElevation="@dimen/_2sdp"
+                android:layout_margin="@dimen/_4sdp"
+                app:cardMaxElevation="@dimen/_2sdp">
+
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:paddingLeft="@dimen/_6sdp"
+                        android:paddingRight="@dimen/_6sdp"
+                        android:paddingTop="@dimen/_6sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioGroup
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rdHome"
+                                    fontPath="@string/semibold"
+                                    android:layout_weight="1"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/colorPrimaryDark"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:text="@string/txt_AddressHome"
+                                    android:textSize="@dimen/_10sdp" />
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rdOffice"
+                                    android:buttonTint="@color/colorPrimaryDark"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:layout_weight="1"
+                                    fontPath="@string/semibold"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/txt_AddressOffice"
+                                    android:textSize="@dimen/_10sdp" />
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/rdOther"
+                                    android:buttonTint="@color/colorPrimaryDark"
+                                    android:textColor="@color/colorPrimaryDark"
+                                    android:layout_weight="1"
+                                    fontPath="@string/semibold"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/txt_AddressOther"
+                                    android:textSize="@dimen/_10sdp" />
+
+                            </RadioGroup>
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:backgroundTint="@color/text"
+                            android:textColorHint="@color/text">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtHouseNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/text"
+                                android:hint="@string/txt_HouseNumber"
+                                android:visibility="gone"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:textColor="@color/text"
+                                android:textColorHint="@color/textlight"
+                                android:textSize="@dimen/_12sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:backgroundTint="@color/text"
+                            android:textColorHint="@color/text">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtStreetAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/text"
+                                android:hint="@string/txt_StreetAddress"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:textColor="@color/text"
+                                android:textColorHint="@color/textlight"
+                                android:textSize="@dimen/_12sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:backgroundTint="@color/text"
+                            android:textColorHint="@color/text">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtCity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/text"
+                                android:hint="@string/txt_City"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:textColor="@color/text"
+                                android:textColorHint="@color/textlight"
+                                android:textSize="@dimen/_12sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:backgroundTint="@color/text"
+                            android:textColorHint="@color/text">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtPincode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/text"
+                                android:hint="@string/txt_Pincode"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                android:textColor="@color/text"
+                                android:textColorHint="@color/textlight"
+                                android:textSize="@dimen/_12sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:backgroundTint="@color/text"
+                            android:textColorHint="@color/text"
+                            android:visibility="gone">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtState"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/text"
+                                android:hint="@string/txt_State"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:textColor="@color/text"
+                                android:textColorHint="@color/textlight"
+                                android:textSize="@dimen/_12sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:backgroundTint="@color/text"
+                            android:textColorHint="@color/text">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/edtCountry"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:backgroundTint="@color/text"
+                                android:hint="@string/txt_Country"
+                                android:text="India"
+                                android:imeOptions="actionDone"
+                                android:singleLine="true"
+                                android:textColor="@color/text"
+                                android:textColorHint="@color/textlight"
+                                android:textSize="@dimen/_12sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <androidx.appcompat.widget.AppCompatCheckBox
+                            android:id="@+id/chDefault"
+                            fontPath="@string/semibold"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/cartbudgetClick"
+                            android:textColor="@color/cartbudgetClick"
+                            android:text="@string/txt_set_as_default"
+                            android:textSize="@dimen/_10sdp"
+                            android:visibility="gone"/>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnSubmit"
+                            fontPath="@string/bold"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_36sdp"
+                            android:background="@drawable/btn_color_accent"
+                            android:shadowColor="@color/colorPrimary"
+                            android:shadowRadius="@android:integer/config_shortAnimTime"
+                            android:text="@string/Submit"
+                            android:layerType="software"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp" />
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </ScrollView>
+            </androidx.cardview.widget.CardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.youngershopping">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity android:name=".ui.home.ui1.fragment.Team_conditionActivity"></activity>
+        <activity
+            android:name=".ui.WalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.home.ui2.HomeActivity2"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme1" /> <!-- Splash and Permission page -->
+        <activity
+            android:name=".ui.start.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity> <!-- Tour pages -->
+        <activity
+            android:name=".ui.start.TourActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeDark" />
+        <activity
+            android:name=".view.tour.DetailActivity"
+            android:screenOrientation="portrait" /> <!-- Home pages -->
+        <activity
+            android:name=".ui.home.ui1.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme1"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <activity
+            android:name=".ui.home.ui1.HomeCategoryActivity"
+            android:label="@string/dummy_category1"
+            android:screenOrientation="portrait" /> <!-- Product Pages -->
+        <activity
+            android:name=".ui.product.ProductListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.product.ProductReviewActivity"
+            android:label="@string/Reviews"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.product.ProductDetailActivity"
+            android:label="@string/ProductDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWhiteDark" /> <!-- Account Pages -->
+        <activity
+            android:name=".ui.account.NotificationListActivity"
+            android:label="@string/account_Notification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.SettingActivity"
+            android:label="@string/account_Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.order.OrderListActivity"
+            android:label="@string/account_Order"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.user.EditProfileActivity"
+            android:label="@string/account_EditProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.FeedbackActivity"
+            android:label="@string/account_Feedback"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.order.OrderTrackActivity"
+            android:label="@string/txtTrackOrder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.order.OrderDetailsActivity"
+            android:label="@string/txtOrderDetail"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWhiteDark" />
+        <activity
+            android:name=".ui.account.OfferListActivity"
+            android:label="@string/account_Offers"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.address.AddressListActivity"
+            android:label="@string/account_Address"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.account.address.AddAddressActivity"
+            android:screenOrientation="portrait" /> <!-- User modules -->
+        <activity
+            android:name=".ui.user.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".ui.user.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".ui.user.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".ui.user.OTPVerifyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".ui.user.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" /> <!-- Transitional Image -->
+        <activity
+            android:name=".view.transitionalimageview.controller.LargeImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar.Transparent" />
+    </application>
+
+</manifest>

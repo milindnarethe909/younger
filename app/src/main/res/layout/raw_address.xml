@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_2sdp"
+            app:cardElevation="@dimen/_1sdp"
+            app:cardMaxElevation="@dimen/_1sdp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_6sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:id="@+id/imgAddressType"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@mipmap/address_office" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_toRightOf="@+id/imgAddressType"
+                    android:layout_width="fill_parent"
+                    android:layout_toLeftOf="@+id/imgEdit"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_6sdp"
+                    android:layout_marginRight="@dimen/_6sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtTitle"
+                        fontPath="@string/semibold"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txt_AddressHome1"
+                        android:textColor="@color/textdark"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtAddress"
+                        fontPath="@string/medium"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dummy_address1"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_9sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtDefault"
+                        fontPath="@string/semibold"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/txt_DefaultAddress"
+                        android:textColor="@color/cartbudgetClick"
+                        android:textSize="@dimen/_8sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:id="@+id/imgEdit"
+                    android:padding="@dimen/_4sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/ic_edit" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

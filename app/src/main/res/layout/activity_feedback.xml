@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.account.OfferListActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_4sdp"
+                tools:ignore="MissingConstraints">
+
+                <include
+                    android:id="@+id/commanRecyclerview"
+                    layout="@layout/comman_recyclerview_without_margin" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:cardElevation="@dimen/_1sdp"
+                    app:cardMaxElevation="@dimen/_1sdp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:padding="@dimen/_6sdp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_edt_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtname"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/Fullname"
+                                android:singleLine="true"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_edt_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_marginBottom="@dimen/_8sdp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtinvoicenumber"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Older Id"
+                                android:singleLine="true"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:gravity="center"
+                                android:singleLine="true"
+                                android:text="+91"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/layout_edt_number"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/edtnumber"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/MobileNumber"
+                                    android:inputType="number"
+                                    android:singleLine="true"
+                                    android:layout_marginLeft="@dimen/_6sdp"
+                                    android:textColor="@color/textdark"
+                                    android:textSize="@dimen/_12sdp" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/layout_edt_comment"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtComment"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="top"
+                                android:hint="@string/txt_Comment"
+                                android:minHeight="@dimen/_100sdp"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/txt_bestTimeToReachYou"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+                            fontPath="@string/semibold"
+                            android:layout_marginTop="@dimen/_4sdp"/>
+                        <RadioGroup
+                            android:id="@+id/radioGroup"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/rb_weekday"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/_4sdp"
+                                android:singleLine="true"
+                                android:text="@string/txt_rb_Week_Days"
+                                fontPath="@string/medium"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/rb_weekend"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/_4sdp"
+                                fontPath="@string/medium"
+                                android:singleLine="true"
+                                android:text="@string/txt_rb_Weekend"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:id="@+id/rb_allday"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                fontPath="@string/medium"
+                                android:paddingLeft="@dimen/_4sdp"
+                                android:singleLine="true"
+                                android:text="@string/txt_rb_All_Days"
+                                android:textSize="@dimen/_10sdp" />
+
+
+                        </RadioGroup>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:visibility="gone">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="@string/txt_time"
+                                android:textSize="@dimen/_10sdp"
+                                fontPath="@string/semibold"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtSelectTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_24sdp"
+                                android:layout_marginLeft="@dimen/_12sdp"
+                                android:layout_marginRight="@dimen/_12sdp"
+                                android:background="@drawable/btn_orders"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_12sdp"
+                                android:paddingRight="@dimen/_12sdp"
+                                android:text="@string/hint_from_to"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmit"
+                    fontPath="@string/bold"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/_36sdp"
+                    android:background="@drawable/btn_color_accent"
+                    android:shadowColor="@color/colorPrimary"
+                    android:shadowRadius="@android:integer/config_shortAnimTime"
+                    android:text="@string/Submit"
+                    android:layerType="software"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_10sdp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

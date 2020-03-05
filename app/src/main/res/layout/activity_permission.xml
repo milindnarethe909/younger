@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.start.SplashActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            fontPath="@string/semibold"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/appSlug"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                fontPath="@string/bold"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/_20sdp"
+                android:visibility="gone"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </RelativeLayout>
+</layout>

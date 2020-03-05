@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.product.ProductListActivity">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearFilter"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="2">
+
+                <include
+                    android:id="@+id/commanRecyclerviewFilterType"
+                    layout="@layout/comman_recyclerview_without_margin" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="fill_parent"
+                android:background="@color/line"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:background="@color/linelight2"
+                android:layout_weight="1.5">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearPriceRange"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.youngershopping.view.rangbar.RangeBar
+                        android:id="@+id/rangebar1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        app:mrb_barWeight="@dimen/_1sdp"
+                        app:mrb_pinColor="@color/cartbudget"
+                        app:mrb_pinMaxFont="@dimen/_11sdp"
+                        app:mrb_pinMinFont="@dimen/_8sdp"
+                        app:mrb_pinRadius="@dimen/_12sdp"
+                        app:mrb_pinTextColor="@color/white"
+                        app:mrb_rangeBar="true"
+                        app:mrb_rangeBarPaddingBottom="@dimen/_20sdp"
+                        app:mrb_rangeBar_rounded="true"
+                        app:mrb_selectorBoundaryColor="@color/colorPrimary"
+                        app:mrb_selectorBoundarySize="3dp"
+                        app:mrb_selectorColor="@color/colorAccent"
+                        app:mrb_selectorSize="@dimen/_8sdp"
+                        app:mrb_temporaryPins="true"
+                        app:mrb_tickDefaultColor="@color/textlight1"
+                        app:mrb_tickEnd="1000"
+                        app:mrb_tickHeight="0dp"
+                        app:mrb_tickInterval="10"
+                        app:mrb_tickStart="50" />
+
+                    <!--
+                        app:mrb_tickLabelColor="@color/indigo500"
+                        app:mrb_connectingLineColors="@array/connecting_colors"
+                        app:mrb_tickLabelSelectedColor="@color/accent"
+                        app:mrb_tickBottomLabels="@array/ticks_labels"
+                        app:mrb_tickTopLabels="@array/ticks_labels"
+                        app:mrb_tickDefaultLabel="label"
+                        app:mrb_tickLabelSize="4sp"-->
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:paddingRight="@dimen/_8sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtPriceMin"
+                            fontPath="@string/semibold"
+                            android:layout_weight="1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/cartbudget"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtPriceMax"
+                            fontPath="@string/semibold"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/cartbudget"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearFilterValue"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/commanRecyclerviewFilterValue"
+                        layout="@layout/comman_recyclerview_without_margin" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:id="@+id/relativeMain"
+            android:layout_width="fill_parent"
+            android:visibility="visible"
+            android:layout_height="fill_parent"
+            tools:ignore="MissingConstraints">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+
+                android:visibility="gone"/>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_4sdp">
+
+                <include
+                    android:id="@+id/commanRecyclerviewFilterResult"
+                    layout="@layout/comman_recyclerview_without_margin"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/commanRecyclerview"
+                    layout="@layout/comman_recyclerview_without_margin_grid" />
+
+
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.youngershopping.view.fab.FloatingActionMenu
+                android:id="@+id/floatMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/sorting"
+                app:menu_colorNormal="@color/cartbudgetClick"
+                app:menu_colorRipple="#99FFFFFF"
+                app:menu_fab_size="normal"
+                app:menu_shadowColor="#66000000"
+                app:menu_shadowRadius="@dimen/_2sdp"
+                app:menu_shadowXOffset="@dimen/_1sdp"
+                app:menu_shadowYOffset="@dimen/_2sdp"
+                app:menu_showShadow="true"
+                app:menu_icon="@drawable/sorting"
+                >
+
+                <com.youngershopping.view.fab.FloatingActionButton
+                    android:id="@+id/floatbuttonPopular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sorting_popular"
+                    app:fab_colorNormal="@color/floatbtnbg"
+                    app:fab_colorPressed="@color/floatbtnbgClick"
+                    app:fab_size="mini"
+                    app:fab_label="@string/Sorting_Popularity"
+                    android:visibility="gone"
+                    app:fabCustomSize="@dimen/_24sdp"/>
+
+                <com.youngershopping.view.fab.FloatingActionButton
+                    android:id="@+id/floatbuttonPriceHL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sorting_price_high_to_low"
+                    app:fab_colorNormal="@color/floatbtnbg"
+                    app:fab_colorPressed="@color/floatbtnbgClick"
+                    app:fab_size="mini"
+                    app:fab_label="@string/Sorting_High_to_Low"
+                    app:fabCustomSize="@dimen/_24sdp"/>
+
+                <com.youngershopping.view.fab.FloatingActionButton
+                    android:id="@+id/floatbuttonPriceLH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sorting_price_low_to_high"
+                    app:fab_colorNormal="@color/floatbtnbg"
+                    app:fabCustomSize="@dimen/_24sdp"
+                    app:fab_label="@string/Sorting_Low_to_High"
+                    app:fab_colorPressed="@color/floatbtnbgClick"
+                    app:fab_size="mini" />
+
+                <com.youngershopping.view.fab.FloatingActionButton
+                    android:id="@+id/floatbuttonNewest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/sorting_newest"
+                    app:fab_label="@string/Sorting_NewestFirst"
+                    app:fab_colorNormal="@color/floatbtnbg"
+                    app:fab_colorPressed="@color/floatbtnbgClick"
+                    app:fab_size="mini"
+                    android:visibility="gone"
+                    app:fabCustomSize="@dimen/_24sdp"/>
+
+            </com.youngershopping.view.fab.FloatingActionMenu>
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

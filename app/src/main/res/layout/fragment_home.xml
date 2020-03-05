@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        tools:context=".ui.home.ui1.fragment.HomeFragment">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:id="@+id/cardHeader"
+            android:layout_margin="@dimen/_8sdp"
+            app:cardCornerRadius="@dimen/_4sdp"
+            app:cardElevation="@dimen/_2sdp"
+            app:cardMaxElevation="@dimen/_2sdp">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtSearch"
+                    fontPath="@string/medium"
+                    android:layout_toLeftOf="@+id/imgSearchVoice"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/transparent"
+                    android:hint="@string/SearchHint"
+                    android:paddingLeft="@dimen/_32sdp"
+                    android:singleLine="true"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:textCursorDrawable="@drawable/cursor_primary"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/textlight"
+                    android:textSize="@dimen/_10sdp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:padding="@dimen/_6sdp"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_voice" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_32sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:padding="@dimen/_6sdp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/imgSearchVoice"
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/ic_search" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/cardHeader"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            tools:ignore="MissingConstraints">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/_119sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearCategory"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        fontPath="@string/bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:text="@string/ShopByCategory"
+                        android:textColor="@color/textdark"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <include
+                        android:id="@+id/commanRecyclerviewCategory"
+                        layout="@layout/comman_recyclerview" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <RelativeLayout
+                    android:id="@+id/linearSale"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/_210sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:background="@mipmap/bg_sale"
+                        android:scaleType="centerCrop"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"/>
+
+                    <include
+                        android:id="@+id/commanRecyclerviewSale"
+                        layout="@layout/comman_recyclerview" />
+
+                </RelativeLayout>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPager1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearNewArrival"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_height="@dimen/_24sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_new_arrival"
+                            fontPath="@string/bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:text="@string/NewArrival"
+                            android:textColor="@color/textdark"
+                            android:textSize="@dimen/_14sdp"
+                            android:visibility="visible"/>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnSeeAllNewArrival"
+                            fontPath="@string/bold"
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_8sdp"
+                            android:background="@drawable/btn_color_accent"
+                            android:shadowColor="@color/colorPrimary"
+                            android:shadowRadius="@android:integer/config_shortAnimTime"
+                            android:text="@string/ViewAll"
+                            android:textAllCaps="false"
+                            android:layerType="software"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_8sdp" />
+
+                    </RelativeLayout>
+
+                    <include
+                        android:id="@+id/commanRecyclerviewNewarrival"
+                        layout="@layout/comman_recyclerview" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearBestSelling"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/linelight1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_height="@dimen/_24sdp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            fontPath="@string/bold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:text="@string/BestSelling"
+                            android:textColor="@color/textdark"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnSeeAllBestSelling"
+                            fontPath="@string/bold"
+                            android:layout_width="@dimen/_48sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_8sdp"
+                            android:background="@drawable/btn_color_accent"
+                            android:shadowColor="@color/colorPrimary"
+                            android:shadowRadius="@android:integer/config_shortAnimTime"
+                            android:text="@string/ViewAll"
+                            android:layerType="software"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_8sdp" />
+
+
+                    </RelativeLayout>
+
+                    <include
+                        android:id="@+id/commanRecyclerviewBestSelling"
+                        layout="@layout/comman_recyclerview" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linearBrands"
+                    android:layout_width="fill_parent"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        fontPath="@string/bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:text="@string/ShopByBrands"
+                        android:textColor="@color/textdark"
+                        android:textSize="@dimen/_14sdp" />
+
+                    <include
+                        android:id="@+id/commanRecyclerviewBrands"
+                        layout="@layout/comman_recyclerview" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </RelativeLayout>
+</layout>

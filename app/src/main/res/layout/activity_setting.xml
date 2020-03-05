@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.account.OfferListActivity">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_4sdp"
+            tools:ignore="MissingConstraints">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_margin="@dimen/_4sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_4sdp"
+                app:cardElevation="@dimen/_1sdp"
+                app:cardMaxElevation="@dimen/_1sdp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="@dimen/_6sdp"
+                    android:paddingRight="@dimen/_6sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        fontPath="@string/semibold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/Setting_OrderNotification"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swOrderNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_margin="@dimen/_4sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_4sdp"
+                app:cardElevation="@dimen/_1sdp"
+                app:cardMaxElevation="@dimen/_1sdp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="@dimen/_6sdp"
+                    android:paddingRight="@dimen/_6sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        fontPath="@string/semibold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/Setting_OfferNotification"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/swOfferNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmit"
+                fontPath="@string/bold"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_width="@dimen/_52sdp"
+                android:layout_gravity="right"
+                android:layout_height="@dimen/_28sdp"
+                android:background="@drawable/btn_color_accent"
+                android:shadowColor="@color/colorPrimary"
+                android:shadowRadius="@android:integer/config_shortAnimTime"
+                android:text="@string/Save"
+                android:layerType="software"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10sdp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

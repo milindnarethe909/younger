@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:cardElevation="@dimen/_2sdp"
+        app:cardMaxElevation="@dimen/_2sdp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/imgOffer"
+                android:scaleType="centerCrop"
+                app:srcCompat="@mipmap/banner8"
+                android:layout_gravity="center_vertical" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white70">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/white70"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    fontPath="@string/medium"
+                    android:id="@+id/txtOffer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="@string/dummy_noti2"
+                    android:paddingLeft="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_2sdp"
+                    android:textColor="@color/textdark"
+                    android:textSize="@dimen/_9sdp"
+                    android:gravity="center_vertical"
+                    android:layout_toLeftOf="@+id/imgOfferInfo"
+                    android:singleLine="false"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:id="@+id/imgOfferInfo"
+                    android:padding="@dimen/_6sdp"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:layout_alignParentRight="true"
+                    app:srcCompat="@drawable/ic_offer_info"
+                    android:layout_gravity="center_vertical" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

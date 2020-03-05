@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:padding="@dimen/_6sdp"
+            android:orientation="horizontal">
+
+            <com.youngershopping.view.ratio.RatioRelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fixed_attribute="HEIGHT"
+                app:horizontal_ratio="1"
+                app:vertical_ratio="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/img"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/oneplus1"/>
+
+            </com.youngershopping.view.ratio.RatioRelativeLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_6sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtTitle"
+                    fontPath="@string/medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:text="@string/dummy_oneplus1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10sdp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtPriceMain"
+                        fontPath="@string/semibold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:text="@string/dummy_price"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtPriceDiscount"
+                        fontPath="@string/it"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:gravity="bottom"
+                        android:textColor="@color/text"
+                        android:textSize="@dimen/_9sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_22sdp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        app:cardBackgroundColor="@color/colorPrimary"
+                        app:cardCornerRadius="@dimen/_11sdp"
+                        app:cardElevation="@dimen/_2sdp"
+                        app:cardMaxElevation="@dimen/_2sdp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imgQuantityMinus"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:padding="@dimen/_5sdp"
+                                app:srcCompat="@drawable/quantity_minus" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:tag="1"
+                                android:id="@+id/txtQuantity"
+                                fontPath="@string/medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="fill_parent"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:maxLength="2"
+                                android:text="5"
+                                android:layout_marginTop="0.5dp"
+                                android:layout_marginBottom="0.5dp"
+                                android:minWidth="@dimen/_26sdp"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imgQuantityPlus"
+                                android:layout_width="@dimen/_22sdp"
+                                android:layout_height="@dimen/_22sdp"
+                                android:padding="@dimen/_5sdp"
+                                app:srcCompat="@drawable/quantity_plus" />
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:padding="@dimen/_1sdp"
+                            app:cardBackgroundColor="@color/cartbudget"
+                            app:cardCornerRadius="@dimen/_12sdp"
+                            app:cardElevation="2dp"
+                            app:cardMaxElevation="2dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center"
+                                android:layout_margin="@dimen/_1sdp"
+                                app:cardBackgroundColor="@color/white"
+                                app:cardCornerRadius="@dimen/_11sdp"
+                                app:cardElevation="0dp"
+                                app:cardMaxElevation="0dp">
+
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/imgCompare"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent"
+                                    android:padding="@dimen/_4sdp"
+                                    app:srcCompat="@drawable/ic_delete" />
+                            </androidx.cardview.widget.CardView>
+                        </androidx.cardview.widget.CardView>
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </RelativeLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

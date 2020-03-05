@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            app:srcCompat="@mipmap/bg"
+            android:scaleType="centerCrop"/>
+
+            <ScrollView
+                android:fillViewport="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_24sdp"
+                    android:paddingLeft="@dimen/_24sdp"
+                    android:paddingRight="@dimen/_24sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/icon" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        fontPath="@string/semibold"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Otp_msg"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_20sdp"
+                        android:gravity="center"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        fontPath="@string/medium"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/OTP_Verify_msg"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp"
+                        android:gravity="center"
+                        android:visibility="visible" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        fontPath="@string/bold"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mobile No."
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="@dimen/_12sdp"
+                        android:visibility="visible" />
+
+
+                    <EditText
+                        android:id="@+id/otp_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:inputType="number"
+                        android:background="@drawable/bg_otp_item"
+                        android:itemBackground="@drawable/bg_otp_item"
+                        android:textColor="@color/white"
+                        app:cursorColor="@color/white"
+                        app:hideLineWhenFilled="true"
+                        app:itemCount="6"
+                        android:hint="Enter OTP"
+                        android:textColorHint="@color/white"
+                        android:gravity="center"
+
+                        android:maxLength="6"
+                        android:padding="10dp"
+                        app:itemHeight="@dimen/_36sdp"
+                        app:itemSpacing="@dimen/_6sdp"
+                        app:itemWidth="@dimen/_36sdp"
+                        app:lineColor="@color/otp_item_state"
+                        app:state_filled="true"
+                        app:viewType="line" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSubmit"
+                        fontPath="@string/bold"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/_36sdp"
+                        android:background="@drawable/btn_color_accent"
+                        android:shadowColor="@color/colorPrimary"
+                        android:shadowRadius="@android:integer/config_shortAnimTime"
+                        android:text="@string/Submit"
+                        android:layerType="software"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_10sdp" />
+
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+    </RelativeLayout>
+
+
+</layout>

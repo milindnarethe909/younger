@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/linelight1"
+        tools:context=".ui.home.ui1.fragment.CartFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            tools:ignore="MissingConstraints">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_4sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:cardElevation="@dimen/_2sdp"
+                    app:cardMaxElevation="@dimen/_2sdp">
+
+                    <include
+                        android:id="@+id/commanRecyclerviewCart"
+                        layout="@layout/comman_recyclerview_without_margin" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    fontPath="@string/bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_4sdp"
+                    android:text="@string/ShipTO"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:cardElevation="@dimen/_2sdp"
+                    app:cardMaxElevation="@dimen/_2sdp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="fill_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtAddress"
+                                fontPath="@string/semibold"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/_12sdp"
+                                android:text="@string/dummy_address1"
+                                android:layout_toLeftOf="@+id/imgEditAddress"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <View
+                                android:layout_toLeftOf="@+id/imgEditAddress"
+                                android:layout_width="0.5dp"
+                                android:layout_centerVertical="true"
+                                android:layout_height="@dimen/_24sdp"
+                                android:background="@color/line" />
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_alignParentRight="true"
+                                app:srcCompat="@drawable/ic_edit"
+                                android:layout_margin="@dimen/_6sdp"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/_2sdp"
+                                android:id="@+id/imgEditAddress"
+                                android:layout_height="@dimen/_24sdp"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/line" />
+
+                        <RadioGroup
+                            android:padding="@dimen/_6sdp"
+                            android:layout_width="fill_parent"
+                            android:orientation="vertical"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/rd1"
+                                    android:layout_centerVertical="true"/>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/rd1"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/_6sdp"
+                                    android:layout_marginRight="@dimen/_6sdp"
+                                    android:layout_toLeftOf="@+id/txtPrice"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        fontPath="@string/medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/dummy_delivery_express"
+                                        android:textColor="@color/textdark"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/dummy_delivery_express1"
+                                        android:textColor="@color/textdark70"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:textSize="@dimen/_10sdp" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/txtPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    android:text="@string/dummy_price_ship"
+                                    fontPath="@string/medium"
+                                    android:textColor="@color/cartbudget"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:paddingRight="@dimen/_4sdp"/>
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_margin="@dimen/_6sdp"
+                                android:background="@color/line" />
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/rd2"
+                                    android:layout_centerVertical="true"/>
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/rd2"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/_6sdp"
+                                    android:layout_marginRight="@dimen/_6sdp"
+                                    android:orientation="vertical">
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        fontPath="@string/medium"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/dummy_delivery_standard"
+                                        android:textColor="@color/textdark"
+                                        android:textSize="@dimen/_12sdp" />
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/dummy_delivery_standard1"
+                                        android:textColor="@color/textdark70"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:textSize="@dimen/_10sdp" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            </RelativeLayout>
+
+                        </RadioGroup>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="@dimen/_2sdp"
+                    app:cardMaxElevation="@dimen/_2sdp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_6sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="fill_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                fontPath="@string/semibold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/SubTotal"
+                                android:layout_toLeftOf="@+id/txtSubTotal"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                fontPath="@string/medium"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="$400"
+                                android:gravity="right"
+                                android:id="@+id/txtSubTotal"
+                                android:minWidth="@dimen/_50sdp"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="fill_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                fontPath="@string/semibold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ShippingCharge"
+                                android:gravity="center_vertical"
+                                android:layout_toLeftOf="@+id/txtShippingCharge"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                fontPath="@string/medium"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="$10"
+                                android:gravity="right"
+                                android:id="@+id/txtShippingCharge"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="fill_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                fontPath="@string/semibold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/PayableAmount"
+                                android:layout_toLeftOf="@+id/txtPayableAmount"
+                                android:textColor="@color/cartbudget"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                fontPath="@string/medium"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="$410"
+                                android:gravity="right"
+                                android:id="@+id/txtPayableAmount"
+                                android:layout_alignParentRight="true"
+                                android:textColor="@color/cartbudget"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    fontPath="@string/bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_4sdp"
+                    android:text="@string/PaymentType"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:cardElevation="@dimen/_2sdp"
+                    app:cardMaxElevation="@dimen/_2sdp">
+
+                    <RadioGroup
+                        android:padding="@dimen/_6sdp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rd3"
+                                android:layout_centerVertical="true"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                fontPath="@string/medium"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/rd3"
+                                android:text="@string/paymentCard"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_6sdp"
+                                android:layout_marginRight="@dimen/_6sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/imgCard"/>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_28sdp"
+                                android:layout_alignParentRight="true"
+                                app:srcCompat="@mipmap/payment_credit_card"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/_4sdp"
+                                android:id="@+id/imgCard"
+                                android:layout_height="@dimen/_28sdp"/>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_margin="@dimen/_6sdp"
+                            android:background="@color/line" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rd4"
+                                android:layout_centerVertical="true"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                fontPath="@string/medium"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/rd4"
+                                android:text="@string/paymentCOD"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_6sdp"
+                                android:layout_marginRight="@dimen/_6sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/imgCOD"/>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_28sdp"
+                                android:layout_alignParentRight="true"
+                                app:srcCompat="@mipmap/payment_cod"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/_4sdp"
+                                android:id="@+id/imgCOD"
+                                android:layout_height="@dimen/_28sdp"/>
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_margin="@dimen/_6sdp"
+                            android:background="@color/line" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.appcompat.widget.AppCompatRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rd5"
+                                android:layout_centerVertical="true"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                fontPath="@string/medium"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/rd5"
+                                android:text="@string/paymentPaytm"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_12sdp"
+                                android:layout_marginLeft="@dimen/_6sdp"
+                                android:layout_marginRight="@dimen/_6sdp"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@+id/imgPaytm"/>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_28sdp"
+                                android:layout_alignParentRight="true"
+                                app:srcCompat="@mipmap/payment_paytm"
+                                android:layout_centerVertical="true"
+                                android:padding="@dimen/_2sdp"
+                                android:id="@+id/imgPaytm"
+                                android:layout_height="@dimen/_28sdp"/>
+                        </RelativeLayout>
+
+
+
+                    </RadioGroup>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    fontPath="@string/semibold"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_8sdp"
+                    android:gravity="center"
+                    android:text="@string/confirmDetail"
+                    android:textColor="@color/cartbudget"
+                    android:textSize="@dimen/_10sdp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPlaceOrder"
+                    fontPath="@string/bold"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/_36sdp"
+                    android:background="@drawable/btn_color_accent"
+                    android:shadowColor="@color/colorPrimary"
+                    android:shadowRadius="@android:integer/config_shortAnimTime"
+                    android:text="@string/ConfirmPlaceOrder"
+                    android:layerType="software"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_12sdp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+</layout>

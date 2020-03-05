@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.home.ui1.fragment.AccountFragment">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/_6sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgEdit"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_2sdp"
+                app:srcCompat="@drawable/ic_edit"
+                app:tint="@color/white" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/imgEdit"
+                android:layout_toRightOf="@+id/cardProfile"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_6sdp"
+                android:paddingRight="@dimen/_6sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtUserName"
+                    fontPath="@string/semibold"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/dummy_user2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtEmail"
+                    fontPath="@string/semibold"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/dummy_email"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardProfile"
+                android:layout_width="@dimen/_56sdp"
+                android:layout_height="@dimen/_56sdp"
+                android:layout_margin="@dimen/_2sdp"
+                android:padding="@dimen/_1sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_28sdp"
+                app:cardElevation="@dimen/_2sdp"
+                app:cardMaxElevation="@dimen/_2sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_1sdp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/_27sdp"
+                    app:cardElevation="0dp"
+                    app:cardMaxElevation="0dp">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@mipmap/avatar3" />
+                </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            tools:ignore="MissingConstraints">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_4sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:cardElevation="@dimen/_1sdp"
+                    app:cardMaxElevation="@dimen/_1sdp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_8sdp"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@mipmap/account_offer" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtOffer"
+                                fontPath="@string/semibold"
+                                android:layout_width="fill_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_24sdp"
+                                android:layout_height="fill_parent"
+                                android:text="@string/account_Offers"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.2dp"
+                            android:background="@color/linelight"/>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_8sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@mipmap/account_notification" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtNotification"
+                                fontPath="@string/semibold"
+                                android:layout_width="fill_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_24sdp"
+                                android:layout_height="fill_parent"
+                                android:text="@string/account_Notification"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.2dp"
+                            android:background="@color/linelight"/>
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_8sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@mipmap/account_myorder" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtOrder"
+                                fontPath="@string/semibold"
+                                android:layout_width="fill_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_24sdp"
+                                android:layout_height="fill_parent"
+                                android:text="@string/account_Order"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.2dp"
+                            android:background="@color/linelight"/>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_8sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@mipmap/account_myaddress" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtAddress"
+                                fontPath="@string/semibold"
+                                android:layout_width="fill_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_24sdp"
+                                android:layout_height="fill_parent"
+                                android:text="@string/account_Address"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.2dp"
+                            android:background="@color/linelight"/>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_8sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@mipmap/account_wishlist" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtWishlist"
+                                fontPath="@string/semibold"
+                                android:layout_width="fill_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_24sdp"
+                                android:layout_height="fill_parent"
+                                android:text="@string/account_Wishlist"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:cardElevation="@dimen/_1sdp"
+                    app:cardMaxElevation="@dimen/_1sdp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_8sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@mipmap/account_mywallet" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtWallet"
+                                fontPath="@string/semibold"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_24sdp"
+                                android:text="@string/account_Wallet"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.2dp"
+                            android:background="@color/linelight" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_8sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@mipmap/account_settings" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtSettings"
+                                fontPath="@string/semibold"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_24sdp"
+                                android:text="@string/account_Settings"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.2dp"
+                            android:background="@color/linelight" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_8sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@mipmap/account_feedback" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtFeedback"
+                                fontPath="@string/semibold"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_24sdp"
+                                android:text="@string/account_Feedback"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.2dp"
+                            android:background="@color/linelight" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_8sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@mipmap/account_rate" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtRate"
+                                fontPath="@string/semibold"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_24sdp"
+                                android:text="@string/account_Rate"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.2dp"
+                            android:background="@color/linelight" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_8sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@mipmap/account_help" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtHelp"
+                                fontPath="@string/semibold"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_24sdp"
+                                android:text="@string/account_HelpCenter"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.2dp"
+                            android:visibility="gone"
+                            android:background="@color/linelight" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:visibility="gone"
+                            android:paddingRight="@dimen/_8sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@mipmap/account_policy" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtPolicy"
+                                fontPath="@string/semibold"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_24sdp"
+                                android:text="@string/account_Policies"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.2dp"
+                            android:background="@color/linelight" />
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_8sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@mipmap/account_term" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtTermsConditions"
+                                fontPath="@string/semibold"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_24sdp"
+                                android:text="@string/account_Terms"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.2dp"
+                            android:background="@color/linelight" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:cardElevation="@dimen/_1sdp"
+                    app:cardMaxElevation="@dimen/_1sdp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/_32sdp"
+                            android:paddingLeft="@dimen/_8sdp"
+                            android:paddingRight="@dimen/_8sdp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@mipmap/account_logout" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtLogout"
+                                fontPath="@string/semibold"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/_24sdp"
+                                android:text="@string/account_Logout"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_10sdp" />
+                        </RelativeLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

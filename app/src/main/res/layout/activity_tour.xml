@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:scaleType="centerCrop"/>
+
+        <View
+            android:id="@+id/position_view"
+            android:layout_width="1px"
+            android:layout_height="1px" />
+
+        <TextView
+            android:id="@+id/indicator_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="1/199"
+            android:visibility="gone"
+            android:padding="@dimen/_12sdp"
+            fontPath="@string/semibold"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="fill_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:id="@+id/linearFooter"
+            android:padding="@dimen/_12sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                fontPath="@string/bold"
+                android:id="@+id/txtTitle"
+                android:textSize="@dimen/_22sdp"
+                android:text="@string/tourTitle1"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:id="@+id/txtSubTitle"
+                android:gravity="center"
+                fontPath="@string/semibold"
+                android:lineSpacingExtra="@dimen/_2sdp"
+                android:minHeight="@dimen/_50sdp"
+                android:textSize="@dimen/_12sdp"
+                android:text="@string/tourSubTitle3"/>
+
+            <com.youngershopping.view.pager.PageIndicator
+                android:id="@+id/indicator"
+                android:padding="@dimen/_4sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                app:ipi_dotDiameter="@dimen/_10sdp"
+                app:ipi_dotGap="@dimen/_6sdp"
+                app:ipi_animationDuration="320"
+                app:ipi_pageIndicatorColor="@color/textdark70"
+                app:ipi_currentPageIndicatorColor="@color/colorPrimaryDark"
+                />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            fontPath="@string/bold"
+            android:id="@+id/txtDONE"
+            android:textSize="@dimen/_12sdp"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/_12sdp"
+            android:visibility="gone"
+            android:text="@string/DONE"/>
+
+
+    </RelativeLayout>
+</layout>

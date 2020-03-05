@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btnOption"
+            fontPath="@string/medium"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_24sdp"
+            android:gravity="center"
+            android:background="@drawable/btn_selected_option"
+            android:shadowColor="@color/colorPrimary"
+            android:shadowRadius="@android:integer/config_shortAnimTime"
+            android:text="@string/dummy_storage_op4"
+            android:textAllCaps="false"
+            android:layerType="software"
+            android:paddingRight="@dimen/_8sdp"
+            android:paddingLeft="@dimen/_8sdp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_10sdp" />
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

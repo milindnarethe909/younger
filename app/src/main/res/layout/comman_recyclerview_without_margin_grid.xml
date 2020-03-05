@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.youngershopping.view.shimmerloading.ShimmerRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        app:shimmer_demo_grid_child_count="10"
+        app:shimmer_demo_angle="30"
+        app:shimmer_demo_layout_manager_type="grid"
+        app:shimmer_demo_mask_width="1"
+        app:shimmer_demo_duration="@android:integer/status_bar_notification_info_maxnum" />
+
+</layout>

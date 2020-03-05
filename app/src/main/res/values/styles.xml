@@ -1,0 +1,137 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme1" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="drawerArrowStyle">@style/DrawerIconStyle</item>
+
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+    </style>
+
+    <style name="DrawerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="CustomTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/_10sdp</item>
+    </style>
+
+    <style name="AppThemeDark" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="AppThemeWhiteDark" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryWhite</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkWhite</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="otpViewStyle">@style/OtpWidget.OtpView</item>
+    </style>
+    <!--Transitional Image-->
+    <style name="AppTheme.NoActionBar.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="EditTextLabelWhite" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/white99</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+    </style>
+
+    <style name="EditTextLabelBlack" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/textlight</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/textdark</item>
+        <item name="colorControlNormal">@color/textdark</item>
+        <item name="colorControlActivated">@color/textdark</item>
+    </style>
+
+    <style name="OtpWidget" />
+
+    <style name="OtpWidget.OtpView" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@null</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!--  Sequence Layout  -->
+    <style name="SequenceLayout">
+        <item name="progressForegroundColor">?colorAccent</item>
+        <item name="progressBackgroundColor">@color/default_progress_background</item>
+    </style>
+
+    <style name="SequenceStep">
+        <!--        <item name="anchorTextAppearance">@style/TextAppearance.AppCompat.Small</item>-->
+        <!--        <item name="titleTextAppearance">@style/TextAppearance.AppCompat.Small</item>-->
+        <!--        <item name="subtitleTextAppearance">@style/TextAppearance.AppCompat.Body1</item>-->
+        <item name="anchorMinWidth">@dimen/sequence_anchor_min_width</item>
+        <item name="anchorMaxWidth">@dimen/sequence_anchor_max_width</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <declare-styleable name="SequenceLayout">
+        <attr name="progressForegroundColor" format="color" />
+        <attr name="progressBackgroundColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SequenceStep">
+        <attr name="anchor" format="string" />
+        <attr name="anchorTextAppearance" format="reference" />
+        <attr name="title" format="string" />
+        <attr name="titleTextAppearance" format="reference" />
+        <attr name="subtitle" format="string" />
+        <attr name="subtitleTextAppearance" format="reference" />
+        <attr name="active" format="boolean" />
+        <attr name="anchorMinWidth" format="dimension" />
+        <attr name="anchorMaxWidth" format="dimension" />
+    </declare-styleable>
+
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+
+
+
+</resources>

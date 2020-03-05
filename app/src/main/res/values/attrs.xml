@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2018 Mukesh Solanki
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--  Step view  -->
+    <declare-styleable name="StateProgressBar">
+
+        <attr name="spb_stateBackgroundColor" format="color" />
+        <attr name="spb_stateForegroundColor" format="color" />
+
+        <attr name="spb_stateNumberBackgroundColor" format="color" />
+        <attr name="spb_stateNumberForegroundColor" format="color" />
+
+        <attr name="spb_currentStateDescriptionColor" format="color" />
+        <attr name="spb_stateDescriptionColor" format="color" />
+
+        <attr name="spb_stateSize" format="dimension" />
+
+        <attr name="spb_stateTextSize" format="dimension" />
+
+        <attr name="spb_stateDescriptionSize" format="dimension" />
+
+        <attr name="spb_stateLineThickness" format="dimension" />
+
+        <attr name="spb_checkStateCompleted" format="boolean" />
+
+        <attr name="spb_stateNumberIsDescending" format="boolean" />
+
+        <attr name="spb_animateToCurrentProgressState" format="boolean" />
+
+        <attr name="spb_enableAllStatesCompleted" format="boolean" />
+
+        <attr name="spb_descriptionTopSpaceDecrementer" format="dimension" />
+
+        <attr name="spb_descriptionTopSpaceIncrementer" format="dimension" />
+
+        <attr name="spb_animationDuration" format="integer" />
+
+        <attr name="spb_animationStartDelay" format="integer" />
+
+
+        <attr name="spb_currentStateNumber" format="enum">
+            <enum name="one" value="1" />
+            <enum name="two" value="2" />
+            <enum name="three" value="3" />
+            <enum name="four" value="4" />
+            <enum name="five" value="5" />
+        </attr>
+
+
+        <attr name="spb_maxStateNumber" format="enum">
+            <enum name="one" value="1" />
+            <enum name="two" value="2" />
+            <enum name="three" value="3" />
+            <enum name="four" value="4" />
+            <enum name="five" value="5" />
+        </attr>
+
+    </declare-styleable>
+    <!--  Rating  -->
+    <declare-styleable name="BaseRatingBar">
+        <attr name="srb_numStars" format="integer" />
+        <attr name="srb_minimumStars" format="float" />
+        <attr name="srb_rating" format="float" />
+        <attr name="srb_starPadding" format="dimension" />
+        <attr name="srb_drawableEmpty" format="reference" />
+        <attr name="srb_drawableFilled" format="reference" />
+        <attr name="srb_isIndicator" format="boolean" />
+        <attr name="srb_scrollable" format="boolean" />
+        <attr name="srb_clickable" format="boolean" />
+        <attr name="srb_clearRatingEnabled" format="boolean" />
+        <attr name="srb_starWidth" format="dimension" />
+        <attr name="srb_starHeight" format="dimension" />
+        <attr name="srb_stepSize" format="float" />
+    </declare-styleable>
+    <!--  Spinner  -->
+    <declare-styleable name="MaterialSpinner" tools:ignore="ResourceName">
+        <attr format="color" name="ms_arrow_tint"/>
+        <attr format="boolean" name="ms_hide_arrow"/>
+        <attr format="color" name="ms_background_color"/>
+        <attr format="color" name="ms_text_color"/>
+        <attr format="dimension" name="ms_dropdown_max_height"/>
+        <attr format="dimension" name="ms_dropdown_height">
+            <enum name="fill_parent" value="-1"/>
+            <enum name="match_parent" value="-1"/>
+            <enum name="wrap_content" value="-2"/>
+        </attr>
+        <attr format="integer" name="ms_background_selector"/>
+        <attr format="dimension" name="ms_padding_top"/>
+        <attr format="dimension" name="ms_padding_left"/>
+        <attr format="dimension" name="ms_padding_bottom"/>
+        <attr format="dimension" name="ms_padding_right"/>
+        <attr format="dimension" name="ms_popup_padding_top"/>
+        <attr format="dimension" name="ms_popup_padding_left"/>
+        <attr format="dimension" name="ms_popup_padding_bottom"/>
+        <attr format="dimension" name="ms_popup_padding_right"/>
+        <attr format="string" name="ms_hint"/>
+        <attr format="color" name="ms_hint_color"/>
+    </declare-styleable>
+
+    <!--  Transitional Image  -->
+    <attr name="stepTrackerDotBackground" format="reference" />
+    <!--  Sequencelayout  -->
+    <declare-styleable name="TransitionalImageView">
+        <attr name="res_id" format="reference" />
+    </declare-styleable>
+    <!--  Shimmer loading layout  -->
+    <declare-styleable name="ShimmerLayout">
+        <attr name="shimmer_color" format="color|reference" />
+        <attr name="shimmer_animation_duration" format="integer|reference" />
+        <attr name="shimmer_auto_start" format="boolean|reference" />
+        <attr name="shimmer_angle" format="integer|reference" />
+        <attr name="shimmer_mask_width" format="float|reference" />
+        <attr name="shimmer_gradient_center_color_width" format="float|reference" />
+        <attr name="shimmer_reverse_animation" format="boolean|reference" />
+    </declare-styleable>
+    <declare-styleable name="ShimmerRecyclerView">
+        <attr name="shimmer_demo_layout" format="reference" />
+        <attr name="shimmer_demo_child_count" format="integer|reference" />
+        <attr name="shimmer_demo_layout_manager_type" format="enum">
+            <enum name="linear_vertical" value="0" />
+            <enum name="linear_horizontal" value="1" />
+            <enum name="grid" value="2" />
+        </attr>
+        <attr name="shimmer_demo_grid_child_count" format="integer|reference" />
+        <attr name="shimmer_demo_shimmer_color" format="color|reference" />
+        <attr name="shimmer_demo_angle" format="integer|reference" />
+        <attr name="shimmer_demo_view_holder_item_background" format="color|reference" />
+        <attr name="shimmer_demo_duration" format="integer|reference" />
+        <attr name="shimmer_demo_mask_width" format="float|reference" />
+        <attr name="shimmer_demo_reverse_animation" format="boolean|reference" />
+    </declare-styleable>
+
+    <!--  Range bar  -->
+    <declare-styleable name="RangeBar">
+        <attr name="mrb_tickStart" format="float" />
+        <attr name="mrb_tickEnd" format="float" />
+        <attr name="mrb_tickInterval" format="float" />
+        <attr name="mrb_tickHeight" format="dimension" />
+        <attr name="mrb_tickDefaultColor" format="color" />
+        <attr name="mrb_tickColors" format="reference" />
+        <attr name="mrb_tickLabelColor" format="color" />
+        <attr name="mrb_tickLabelSelectedColor" format="color" />
+        <attr name="mrb_tickBottomLabels" format="reference" />
+        <attr name="mrb_tickTopLabels" format="reference" />
+        <attr name="mrb_tickDefaultLabel" format="reference|string" />
+        <attr name="mrb_tickLabelSize" format="dimension" />
+        <attr name="mrb_barWeight" format="dimension" />
+        <attr name="mrb_rangeBarColor" format="reference|color" />
+        <attr name="mrb_selectorSize" format="dimension" />
+        <attr name="mrb_selectorBoundaryColor" format="reference|color" />
+        <attr name="mrb_selectorBoundarySize" format="dimension" />
+        <attr name="mrb_pinTextColor" format="reference|color" />
+        <attr name="mrb_pinColor" format="reference|color" />
+        <attr name="mrb_pinPadding" format="dimension" />
+        <attr name="mrb_pinMinFont" format="dimension" />
+        <attr name="mrb_pinMaxFont" format="dimension" />
+        <attr name="mrb_rangeBarPaddingBottom" format="dimension" />
+        <attr name="mrb_selectorColor" format="reference|color" />
+        <attr name="mrb_leftSelectorColor" format="reference|color" />
+        <attr name="mrb_rightSelectorColor" format="reference|color" />
+        <attr name="mrb_rangeBar" format="boolean" />
+        <attr name="mrb_temporaryPins" format="boolean" />
+        <attr name="mrb_rangeBar_rounded" format="boolean" />
+        <attr name="mrb_connectingLineWeight" format="dimension" />
+        <attr name="mrb_connectingLineColor" format="reference|color" />
+        <attr name="mrb_pinRadius" format="dimension" />
+        <attr name="mrb_connectingLineColors" format="reference" />
+        <attr name="mrb_onlyOnDrag" format="boolean" />
+    </declare-styleable>
+
+    <!--  Floating  -->
+    <declare-styleable name="FloatingActionButton">
+        <attr name="fab_colorNormal" format="color" />
+        <attr name="fab_colorPressed" format="color" />
+        <attr name="fab_colorDisabled" format="color" />
+        <attr name="fab_colorRipple" format="color" />
+        <attr name="fab_showShadow" format="boolean" />
+        <attr name="fab_shadowColor" format="color" />
+        <attr name="fab_shadowRadius" format="dimension" />
+        <attr name="fab_shadowXOffset" format="dimension" />
+        <attr name="fab_shadowYOffset" format="dimension" />
+        <attr name="fab_size" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+        <attr name="fab_showAnimation" format="reference" />
+        <attr name="fab_hideAnimation" format="reference" />
+        <attr name="fab_label" format="string" />
+        <attr name="fab_elevationCompat" format="dimension" />
+        <attr name="fab_progress_color" format="color" />
+        <attr name="fab_progress_backgroundColor" format="color" />
+        <attr name="fab_progress_indeterminate" format="boolean" />
+        <attr name="fab_progress_max" format="integer" />
+        <attr name="fab_progress" format="integer" />
+        <attr name="fab_progress_showBackground" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FloatingActionMenu">
+        <attr name="menu_showShadow" format="boolean" />
+        <attr name="menu_buttonSpacing" format="dimension" />
+        <attr name="menu_labels_margin" format="dimension" />
+        <attr name="menu_labels_showAnimation" format="reference" />
+        <attr name="menu_labels_hideAnimation" format="reference" />
+        <attr name="menu_labels_paddingTop" format="dimension" />
+        <attr name="menu_labels_paddingLeft" format="dimension" />
+        <attr name="menu_labels_paddingRight" format="dimension" />
+        <attr name="menu_labels_paddingBottom" format="dimension" />
+        <attr name="menu_labels_padding" format="dimension" />
+        <attr name="menu_labels_textColor" format="reference|color" />
+        <attr name="menu_labels_textSize" format="dimension" />
+        <attr name="menu_labels_cornerRadius" format="dimension" />
+        <attr name="menu_labels_showShadow" format="boolean" />
+        <attr name="menu_labels_colorNormal" format="color" />
+        <attr name="menu_labels_colorPressed" format="color" />
+        <attr name="menu_labels_colorRipple" format="color" />
+        <attr name="menu_labels_position" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="menu_icon" format="reference" />
+        <attr name="menu_animationDelayPerItem" format="integer" />
+        <attr name="menu_buttonToggleAnimation" format="reference" />
+        <attr name="menu_labels_singleLine" format="boolean" />
+        <attr name="menu_labels_ellipsize" format="enum">
+            <enum name="none" value="0" />
+            <enum name="start" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="end" value="3" />
+            <enum name="marquee" value="4" />
+        </attr>
+        <attr name="menu_labels_maxLines" format="integer" />
+        <attr name="menu_fab_size" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+        <attr name="menu_labels_style" format="reference" />
+        <attr name="menu_labels_customFont" format="string" />
+        <attr name="menu_shadowColor" format="color" />
+        <attr name="menu_shadowRadius" format="dimension" />
+        <attr name="menu_shadowXOffset" format="dimension" />
+        <attr name="menu_shadowYOffset" format="dimension" />
+        <attr name="menu_colorNormal" format="color" />
+        <attr name="menu_colorPressed" format="color" />
+        <attr name="menu_colorRipple" format="color" />
+        <attr name="menu_openDirection" format="enum">
+            <enum name="up" value="0" />
+            <enum name="down" value="1" />
+        </attr>
+        <attr name="menu_backgroundColor" format="color" />
+        <attr name="menu_fab_label" format="string" />
+        <attr name="menu_fab_show_animation" format="reference" />
+        <attr name="menu_fab_hide_animation" format="reference" />
+    </declare-styleable>
+
+    <!--  Page Indicator  -->
+    <declare-styleable name="InkPageIndicator">
+        <attr name="ipi_dotDiameter" format="dimension" />
+        <attr name="ipi_dotGap" format="dimension" />
+        <attr name="ipi_animationDuration" format="integer" />
+        <attr name="ipi_pageIndicatorColor" format="color" />
+        <attr name="ipi_currentPageIndicatorColor" format="color" />
+    </declare-styleable>
+
+    <!--  Screen Ratio  -->
+    <declare-styleable name="RatioRelativeLayout">
+        <attr name="horizontal_ratio" format="float" />
+        <attr name="vertical_ratio" format="float" />
+        <attr name="fixed_attribute" format="enum">
+            <enum name="HEIGHT" value="0" />
+            <enum name="WIDTH" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!--Tour View pager-->
+    <declare-styleable name="app">
+        <attr name="bottomDragVisibleHeight" format="dimension" />
+        <attr name="bototmExtraIndicatorHeight" format="dimension" />
+    </declare-styleable>
+
+    <!--OTP-->
+    <declare-styleable name="OtpViewTheme">
+        <attr name="otpViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="OtpView">
+        <attr name="itemCount" format="integer" />
+        <attr name="itemWidth" format="dimension" />
+        <attr name="itemHeight" format="dimension" />
+        <attr name="itemRadius" format="dimension" />
+        <attr name="itemSpacing" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="lineColor" format="reference|color" />
+        <attr name="viewType" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="line" value="1" />
+            <enum name="none" value="2" />
+        </attr>
+        <attr name="android:cursorVisible" />
+        <attr name="cursorWidth" format="dimension" />
+        <attr name="cursorColor" format="reference|color" />
+        <attr name="android:itemBackground" />
+        <attr name="hideLineWhenFilled" format="boolean" />
+        <attr name="state_filled" format="boolean" />
+        <attr name="rtlTextDirection" format="boolean" />
+    </declare-styleable>
+
+</resources>

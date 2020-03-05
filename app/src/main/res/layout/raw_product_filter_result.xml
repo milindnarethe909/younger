@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_4sdp"
+            app:cardBackgroundColor="@color/linelight1"
+            app:cardCornerRadius="@dimen/_1sdp"
+            app:cardElevation="@dimen/_1sdp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_margin="@dimen/_2sdp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/txtFilterType"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_height="wrap_content"
+                    android:text="Category :"
+                    fontPath="@string/medium"
+                    android:textColor="@color/textdark"
+                    android:textSize="@dimen/_8sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/txtFilterResult"
+                    android:padding="@dimen/_2sdp"
+                    fontPath="@string/semibold"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_category2"
+                    android:textColor="@color/cartbudget"
+                    android:textSize="@dimen/_9sdp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

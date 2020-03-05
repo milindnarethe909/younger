@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_8sdp"
+            android:orientation="horizontal">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_48sdp"
+                app:cardCornerRadius="@dimen/_24sdp"
+                app:cardElevation="@dimen/_2sdp"
+                app:cardMaxElevation="@dimen/_2sdp"
+                android:layout_margin="@dimen/_1sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/imgReview"
+                    app:srcCompat="@mipmap/avatar2"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    fontPath="@string/medium"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:id="@+id/txtReviewUsername"
+                    android:text="@string/dummy_user1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgStar1"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        app:srcCompat="@drawable/star_fill" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgStar2"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        app:srcCompat="@drawable/star_fill" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgStar3"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        app:srcCompat="@drawable/star_fill" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgStar4"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        app:srcCompat="@drawable/star_fill" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgStar5"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        app:srcCompat="@drawable/star_border" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_user_review"
+                    android:textColor="@color/text"
+                    android:id="@+id/txtUserReview"
+                    fontPath="@string/medium"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:textSize="@dimen/_10sdp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dummy_user_review_date"
+                    android:textColor="@color/colorPrimary"
+                    android:gravity="right"
+                    android:id="@+id/txtUserReviewDate"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:textSize="@dimen/_9sdp" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/linedark" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

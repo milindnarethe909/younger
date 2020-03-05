@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.home.ui1.HomeActivity">
+
+        <!-- Framelayout to display Fragments -->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <FrameLayout
+                android:id="@+id/frameContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/linearFooter"
+                android:layout_marginBottom="0.5dp"/>
+
+            <View
+                android:id="@+id/viewBottom"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_above="@+id/linearFooter"
+                android:background="@drawable/top_shadow_gradient" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearFooter"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linear1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="ClickHome"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_4sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgHome"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:src="@drawable/menu_ic_home_selected" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtHome"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:text="@string/Home"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linear2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="ClickCart"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_4sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgCart"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:src="@drawable/menu_ic_shopping_cart_unselected" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtCart"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:text="@string/Cart"
+                        android:textColor="@color/icon_unselected"
+                        android:textSize="@dimen/_12sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/linear3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="ClickAccount"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_4sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imgAccount"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:src="@drawable/menu_ic_account_unselected" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtAccount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/_2sdp"
+                        android:text="@string/Account"
+                        android:textColor="@color/icon_unselected"
+                        android:textSize="@dimen/_12sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

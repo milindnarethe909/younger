@@ -1,0 +1,429 @@
+<resources>
+    <string name="app_name">Younger Shopping Club</string>
+    <string name="number">+91 7020275703</string>
+    <string name="email">milindnarethe@gmail.com</string>
+    <!--font-->
+    <string name="bold">fonts/TxtBold.ttf</string>
+    <string name="semibold">fonts/TxtSemibold.ttf</string>
+    <string name="medium">fonts/TxtMedium.ttf</string>
+    <string name="reg">fonts/TxtRegular.ttf</string>
+    <string name="it">fonts/TxtMedium.ttf</string>
+
+    <string name="page1">Home Page</string>
+    <string name="page2">Category</string>
+    <string name="page3">Product List View</string>
+    <string name="page4">Product Grid View</string>
+    <string name="page5">Filter</string>
+    <string name="page6">Product Detail</string>
+    <string name="page7">Review</string>
+    <string name="page8">Cart Page</string>
+    <string name="page9">Login</string>
+    <string name="page10">Register</string>
+    <string name="page11">OTP Verification</string>
+    <string name="page12">Forgot Password</string>
+    <string name="page13">Reset Password</string>
+    <string name="page14">Account Page</string>
+    <string name="page15">Edit Profile</string>
+    <string name="page16">Offer</string>
+    <string name="page17">Notification</string>
+    <string name="page18">My Order</string>
+    <string name="page19">Order Detail</string>
+    <string name="page20">Track Order</string>
+    <string name="page21">Return Product</string>
+    <string name="page22">Review on Product</string>
+    <string name="page23">My Address Book</string>
+    <string name="page24">Add Address</string>
+    <string name="page25">My Wishlist</string>
+    <string name="page26">Settings</string>
+    <string name="page27">Feedback</string>
+    <string name="page28">Home Page Navigation</string>
+
+    <string name="dummy_long_txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"'"s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+    <string name="dummy_avg_rating">4.5</string>
+
+    <string name="dummy_email">android.studio@gmail.com</string>
+    <string name="dummy_price">$100</string>
+    <string name="dummy_oneplus1_price">$550</string>
+    <string name="dummy_oneplus1_price_discount">$600</string>
+    <string name="dummy_price_discount">$110</string>
+    <string name="dummy_price_ship">+$10</string>
+    <string name="dummy_delivery_express">Express Delivery</string>
+    <string name="dummy_delivery_express1">1 day delivery</string>
+    <string name="dummy_delivery_standard">Standard Delivery</string>
+    <string name="dummy_delivery_standard1">Upto 5 to 7 business day delivery</string>
+    <string name="currency">$</string>
+
+    <string name="dummy_address1">3021 Pooh Bear Lane, 3rd Floor, SELMA, AL, Alabama, 36703</string>
+    <string name="dummy_user1">James Bond</string>
+    <string name="dummy_user2">Sachin Tendulkar</string>
+    <string name="dummy_user_review">Finally one plus has involved and presented a better shaped handset. Amazing display quality and the curved edged display.</string>
+    <string name="dummy_user_review_date">26 April 2017</string>
+
+    <string name="dummy_storage_op1">16GB</string>
+    <string name="dummy_storage_op2">32GB</string>
+    <string name="dummy_storage_op3">64GB</string>
+    <string name="dummy_storage_op4">128GB</string>
+
+    <string name="dummy_spec1">OS</string>
+    <string name="dummy_spec2">RAM</string>
+    <string name="dummy_spec3">Item Weight</string>
+    <string name="dummy_spec4">Product Dimensions</string>
+    <string name="dummy_spec5">Batteries</string>
+    <string name="dummy_spec6">Display technology</string>
+    <string name="dummy_spec7">Special features</string>
+
+    <string name="dummy_notification">Notification Title</string>
+
+    <string name="dummy_noti1">Thank you for downloading the application.</string>
+    <string name="dummy_noti2">Get 20% off on macbook pro, 3 days validity.</string>
+    <string name="dummy_noti3">Your order #1234567890 has been delivered.\nThank you,\nContinue to shopping with us.</string>
+
+    <string name="dummy_spec11">Android 9 Pie Oxygen OS</string>
+    <string name="dummy_spec22">8 GB</string>
+    <string name="dummy_spec33">204 g</string>
+    <string name="dummy_spec44">16.3 x 0.9 x 7.6 cm</string>
+    <string name="dummy_spec55">1 Lithium ion batteries required. (included)</string>
+    <string name="dummy_spec66">pixel density of 515 PPI and Aspect Ratio 19.5:9</string>
+    <string name="dummy_spec77">Dual Sim, Front Camera, Touchscreen, USB, In-display Fingerprint sensor, Accelerometer, Electronic compass, Gyroscope, Ambient light sensor, Proximity sensor, Sensor core, Laser sensor</string>
+
+    <string name="dummy_oneplus1">OnePlus 7 (Mirror Grey, 8GB RAM, 128GB Storage)</string>
+    <string name="dummy_oneplus2">OnePlus 7 (Mirror Grey, 16GB RAM, 256GB Storage)</string>
+    <string name="dummy_oneplus3">OnePlus 7 Pro</string>
+
+    <string name="dummy_returnreason1">Dead On Arrival</string>
+    <string name="dummy_returnreason2">Faulty, please supply details</string>
+    <string name="dummy_returnreason3">Order Error</string>
+    <string name="dummy_returnreason4">Other, please supply details</string>
+    <string name="dummy_returnreason5">Received Wrong Item</string>
+
+    <string name="dummy_category1">Mobiles</string>
+    <string name="dummy_category2">Men"'"s Fashion</string>
+    <string name="dummy_category3">Women"'"s Fashion</string>
+    <string name="dummy_category4">TVs, ACs &amp; Appliances</string>
+    <string name="dummy_category5">Laptops &amp; PCs</string>
+    <string name="dummy_category6">Home &amp; Kitchen</string>
+    <string name="dummy_category7">Kids &amp; Toys Store</string>
+    <string name="dummy_category8">Beauty &amp; Grooming</string>
+    <string name="dummy_category9">Cars &amp; Bikes</string>
+
+    <string name="dummy_subcategory1">Clothing</string>
+    <string name="dummy_subcategory1_1">TShirts, Jeans &amp; morey</string>
+    <string name="dummy_subcategory2">Footwear</string>
+    <string name="dummy_subcategory2_1">Shoes &amp; more</string>
+    <string name="dummy_subcategory3">Accessories</string>
+    <string name="dummy_subcategory3_1">Watches, Bags &amp; more</string>
+
+    <string name="dummy_subcategory10">Men Clothing Store</string>
+    <string name="dummy_subcategory11">T-Shirts</string>
+    <string name="dummy_subcategory21">Jeans</string>
+    <string name="dummy_subcategory31">Sports Wear</string>
+    <string name="dummy_subcategory41">Suits &amp; Blazers</string>
+    <string name="dummy_subcategory51">Inner Wear</string>
+    <string name="dummy_subcategory61">Winter Wear</string>
+    <string name="dummy_subcategory71">Shorts</string>
+    <string name="dummy_subcategory151">Ethnic Wear</string>
+
+    <string name="dummy_subcategory81">Wallet</string>
+    <string name="dummy_subcategory91">Luggage</string>
+    <string name="dummy_subcategory101">Socks</string>
+    <string name="dummy_subcategory111">Sunglasses</string>
+    <string name="dummy_subcategory121">Jewellery</string>
+
+    <string name="dummy_subcategory131">Slippers</string>
+    <string name="dummy_subcategory141">Loafers</string>
+
+    <string name="dummy_orderid">#791568622698A</string>
+    <string name="dummy_orderid1">#791568622698A</string>
+
+    <string name="dummy_item1">Mentli Solid Black Slim Fit</string>
+    <string name="dummy_item2">Mentli Solid Light Blue Slim Fit</string>
+    <string name="dummy_item3">Mentli Solid Yellow Slim Fit</string>
+    <string name="dummy_item4">Mentli Solid Navy Dark Blue Slim Fit</string>
+    <string name="dummy_item5">Mentli Solid Blue Slim Fit</string>
+    <string name="dummy_item6">Mentli Solid Till Slim Fit</string>
+
+    <string name="dummy_macbook1">Apple Macbook Pro 12 with Touch Bar</string>
+    <string name="dummy_mobile1">Samsung Galaxy Note 9 8GB - 512Gb</string>
+    <string name="dummy_dress1">7 Level Karina Dress Sweet Pesta (Medium size, Maroon Color)</string>
+    <string name="dummy_book1">Harry Potter Special Edition</string>
+
+    <string name="dummy_cameraitem1">Action Camera</string>
+    <string name="dummy_cameraitem2">Compact Camera</string>
+    <string name="dummy_cameraitem3">Camera Nicon</string>
+    <string name="dummy_cameraitem4">SLR D1000</string>
+    <string name="dummy_cameraitem5">Camera Digital!</string>
+    <string name="dummy_cameraitem6">Compact Camera</string>
+    <string name="dummy_cameraitem7">Neon Camera</string>
+
+    <!--  Main Page -->
+    <string name="txtDesignedCreateBy">Designed created by Shopclub Team</string>
+
+    <!--  Feedback -->
+    <string name="txt_invoice_number">Invoice Number</string>
+    <string name="txt_bestTimeToReachYou">Best time to reach you</string>
+    <string name="txt_rb_Week_Days">Week Days</string>
+    <string name="txt_rb_Weekend">Weekend</string>
+    <string name="txt_rb_All_Days">All Days</string>
+    <string name="txt_fromto_time">Select From To Time</string>
+    <string name="txt_select_time">Select Valid Time</string>
+    <string name="txt_time">Time:</string>
+    <string name="txt_select_all_type">Select At-least One Feedback Type</string>
+    <string name="hint_from_to">From - To</string>
+
+    <string name="txt_excellent">Excellent</string>
+    <string name="txt_good">Good</string>
+    <string name="txt_average">Average</string>
+    <string name="txt_bad">Bad</string>
+    <string name="txt_poor">Poor</string>
+
+    <string name="txt_store_ambience">Store ambience/decor/layout</string>
+    <string name="txt_product_range">Product range</string>
+    <string name="txt_product_availability">Product availability</string>
+    <string name="txt_staff_attitude">Staff attitude</string>
+    <string name="txt_product_knowledge">Product Knowledge of staff</string>
+    <string name="txt_billing_payment">Billing and payment</string>
+
+    <!--  Return -->
+    <string name="txt_ReturnProduct">Return item</string>
+    <string name="txt_ReviewProduct">Item Review</string>
+    <string name="txt_reasonReturn">Select reason for return item</string>
+    <string name="txt_Comment">Comment</string>
+
+    <!--  Home support help -->
+    <string name="txt_support_help">Support &amp; Inquiry</string>
+    <string name="txt_inquiry">For business inquiry, lets chat on whatsapp</string>
+    <string name="txtOR">OR</string>
+    <string name="whatsapp_not_install">Whatsapp is not available in your device</string>
+
+    <!--  Address -->
+    <string name="txt_AddAddress">Add Address</string>
+    <string name="txt_EditAddress">Edit Address</string>
+    <string name="txt_AddressHome">Home</string>
+    <!--    <string name="txt_AddressHome1">Home Address</string>-->
+    <string name="txt_AddressHome1">Current Address</string>
+    <string name="txt_AddressOffice">Office</string>
+    <string name="txt_AddressOffice1">Office Address</string>
+    <string name="txt_AddressOther">Other</string>
+    <string name="txt_AddressOther1">Other Address</string>
+    <string name="txt_HouseNumber">House number</string>
+    <string name="txt_StreetAddress">Street address</string>
+    <string name="txt_Area">Area</string>
+    <string name="txt_City">City</string>
+    <string name="txt_Pincode">Pincode</string>
+    <string name="txt_State">State</string>
+    <string name="txt_Country">Country</string>
+    <string name="txt_set_as_default">Set as default?</string>
+    <string name="txt_DefaultAddress">Default Address</string>
+
+    <!--  Track Order -->
+    <string name="txt_OrderStep_Placed">Order Placed</string>
+    <string name="txt_OrderStep_Placed1">Your order has been placed</string>
+    <string name="txt_OrderStep_Confirmed">Order Confirmed</string>
+    <string name="txt_OrderStep_Confirmed1">We have received your order</string>
+    <string name="txt_OrderStep_Processed">Order Processed</string>
+    <string name="txt_OrderStep_Processed1">We are preparing your order</string>
+    <string name="txt_OrderStep_Shipped">Order Shipped</string>
+    <string name="txt_OrderStep_Shipped1">Your order has been shipped</string>
+    <string name="txt_OrderStep_Delivered">Order Delivered</string>
+    <string name="txt_OrderStep_Delivered1">Order has been delivered successfully</string>
+
+    <!--  Order Detail -->
+    <string name="txt_DeliveryAddress">Delivery Address</string>
+    <string name="txt_PaymentDetail">Payment Detail</string>
+    <string name="txtQuantity">Quantity</string>
+    <string name="txtReview">Review</string>
+    <string name="txtReturn">Return</string>
+
+    <!--  Order  -->
+    <string name="txt_Order_Delivered_Successfully">Order Delivered Successfully</string>
+    <string name="txt_Order_DelivereTime">Approx Delivery time :</string>
+    <string name="txt_Order_DelivereON">Approx Delivery on</string>
+    <string name="txt_Order_ON">Order on</string>
+    <string name="txt_OrderID">Order ID:</string>
+    <string name="txt_Order_cod">(Cash on Delivery)</string>
+    <string name="txt_Order_paytm">(Paytm)</string>
+    <string name="txt_Order_card">(Credit / Debit Card)</string>
+
+    <string name="txtTrackOrder">Track Order</string>
+    <string name="txtRepeatOrder">Repeat Order</string>
+    <string name="txtCancelOrder">Cancel Order</string>
+    <string name="txtOrderDetail">Order Detail</string>
+
+    <!--  Setting  -->
+    <string name="Setting_OrderNotification">Order Notifications</string>
+    <string name="Setting_OfferNotification">Offer Notifications</string>
+
+    <!--  Profile  -->
+    <string name="account_EditProfile">Edit Profile</string>
+    <string name="account_deactive_account">De-active account?</string>
+    <string name="NewPassword">New Password</string>
+    <string name="OldPassword">Old Password</string>
+    <string name="ChangePassword">Change Password?</string>
+
+    <!--  Account  -->
+    <string name="account_Order">My Orders</string>
+    <string name="account_Offers">Offers</string>
+    <string name="account_Notification">Notification</string>
+    <string name="account_Address">My Address book</string>
+    <string name="account_Wishlist">My Wishlist</string>
+
+    <string name="account_Settings">Settings</string>
+    <string name="account_Share">Share</string>
+    <string name="account_Feedback">Feedback</string>
+    <string name="account_Rate">Rate Us</string>
+    <string name="account_Wallet">My Wallet</string>
+    <string name="account_HelpCenter">Help Center</string>
+    <string name="account_Policies">Policies</string>
+    <string name="account_Terms">Terms &amp; Conditions</string>
+    <string name="account_Logout">Logout</string>
+
+    <string name="account_Logout_msg">Are you sure want to logout?</string>
+
+    <!--  Cart  -->
+    <string name="check_icon">&#xf00c;</string>
+    <string name="CartStep1">Cart Item</string>
+    <string name="CartStep2">Delivery Address</string>
+    <string name="CartStep3">Payment Method</string>
+    <string name="CartStep4">Checkout</string>
+    <string name="Previous">Previous</string>
+    <string name="Next">Next</string>
+
+    <string name="ShipTO">Ship To</string>
+    <string name="SubTotal">Sub Total :</string>
+    <string name="ShippingCharge">Shipping Charge :</string>
+    <string name="PayableAmount">Payable Amount :</string>
+    <string name="TotalAmount">Total Amount :</string>
+    <string name="PaymentType">Payment Type</string>
+    <string name="paymentCard">Online</string>
+    <string name="paymentCOD">Cash On Delivery</string>
+    <string name="paymentPaytm">PAYTM</string>
+    <string name="confirmDetail">Confirm your above details</string>
+    <string name="ConfirmPlaceOrder">Place order</string>
+
+
+    <!--  Category list  -->
+    <string name="PopularProduct">Popular Products</string>
+
+    <!--  Product list  -->
+    <string name="Productlist">Product List</string>
+    <string name="Grid">Grid</string>
+    <string name="List">List</string>
+    <string name="Sorting_High_to_Low">Price High to Low</string>
+    <string name="Sorting_Low_to_High">Price Low to High</string>
+    <string name="Sorting_Popularity">Popularity</string>
+    <string name="Sorting_NewestFirst">Newest First</string>
+    <string name="Filter">Filter</string>
+
+    <!--  Product Detail  -->
+    <string name="RelatedProduct">Related Products</string>
+    <string name="ProductDetail">Product Detail</string>
+    <string name="Description">Description</string>
+    <string name="Storage">Storage</string>
+    <string name="Specification">Specification</string>
+    <string name="CheckAvailability">Check Availability</string>
+    <string name="EnterDeliveryPincode">Enter Delivery Pincode</string>
+    <string name="Check">Check</string>
+    <string name="UsuallyDelivered">Usually delivered in 5-7 days</string>
+    <string name="Enter_pincode_for_exact_delivery">Enter pincode for exact delivery dates &amp; charges</string>
+    <string name="CustomerReview">Customer Review &amp; Rating</string>
+    <string name="CustomerReviewRating">245 Ratings &amp; 50 Reviews</string>
+    <string name="SeeMore">See More</string>
+    <string name="Returnable">Returnable</string>
+    <string name="ReturnableNot">Not Returnable</string>
+
+    <!--  Reviews  -->
+    <string name="Reviews">Reviews</string>
+    <string name="TotalRatings">/5</string>
+
+    <!--  Home fragment  -->
+    <string name="SearchHint">Search by Product, Brands, Category, etc..</string>
+    <string name="ViewAll">View All</string>
+    <string name="ShopByCategory">Shop by Category</string>
+    <string name="ShopByBrands">Shop by Brands</string>
+    <string name="NewArrival">New Arrival</string>
+    <string name="BestSelling">Best Selling</string>
+    <string name="Flash">Flash</string>
+    <string name="Sale">Sale</string>
+    <string name="Available">Available</string>
+    <string name="SaleEnd">End sale in :\n23 : 30 : 00</string>
+    <string name="allCategory">All Categories</string>
+
+    <!--  Splash  -->
+    <string name="appSlug">Explore your shopping experience</string>
+    <!--  Tour page  -->
+    <string name="SKIP">SKIP</string>
+    <string name="NEXT">NEXT</string>
+    <string name="DONE">DONE</string>
+    <string name="tourTitle1">ShopClub</string>
+    <string name="tourTitle2">Choose Item</string>
+    <string name="tourTitle3">Buy Item</string>
+    <string name="tourSubTitle1">Explore your shopping experience</string>
+    <string name="tourSubTitle2">Choose Items wherever you are with this application to make life easier</string>
+    <string name="tourSubTitle3">Shop from thousand brands in the world in one application at throwaway prices</string>
+
+    <!--  Home Page  -->
+    <string name="Home">Home</string>
+    <string name="Cart">Cart</string>
+    <string name="Account">Account</string>
+
+    <!--   Login  -->
+    <string name="Fullname">Full Name</string>
+    <string name="MobileNumber">Mobile Number</string>
+    <string name="Email">Email / Mobile No.</string>
+    <string name="Password">Password</string>
+    <string name="ConfirmPassword">Confirm Password</string>
+    <string name="SecureLogin">Secure Login</string>
+    <string name="ForgotPassword">Forgot Password?</string>
+    <string name="OR">OR</string>
+    <string name="dontHaveAccount">Don"'"t have an account?</string>
+    <string name="SignupNow">Signup Now!</string>
+
+    <!--  Register  -->
+    <string name="Register">Register</string>
+    <string name="Read_Terms">Read &amp; accept our terms &amp; conditions</string>
+    <string name="alreadyHaveAccount">Already have an account?</string>
+    <string name="LoginHere">Login here!</string>
+
+    <!--  Forgot Password  -->
+    <string name="Forgot_Password_msg">We just need\nyour registered Email Id\nto sent a OTP\nfor reset password.</string>
+    <string name="VerifyAccount">Verify Account</string>
+
+    <!--  Otp Verify  -->
+    <string name="Otp_msg">Enter an OTP \nto verify your account</string>
+    <string name="OTP_Verify_msg">Please type the verification code sent to</string>
+
+    <!--  Reset password  -->
+    <string name="ResetAccount">Reset Account</string>
+    <string name="ResetAccount_msg">Enter new password\nto reset your account</string>
+
+    <!--  Common page  -->
+    <string name="permission_requried">All permission is required</string>
+    <string name="No">No</string>
+    <string name="Yes">Yes</string>
+    <string name="OK">OK</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Submit">Submit</string>
+    <string name="Save">Save</string>
+    <string name="AddToCart">Add to Cart</string>
+    <string name="RemoveCart">Remove</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  Transitional Image  -->
+    <string name="view_location_left">view_loaction_left</string>
+    <string name="view_location_top">view_location_top</string>
+    <string name="view_width">view_width</string>
+    <string name="view_height">view_height</string>
+    <string name="view_info">view_info</string>
+    <string name="image_res_id">image_res_id</string>
+    <string name="image_byte_array">image_byte_array</string>
+    <string name="transitional_image">transitional_image</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

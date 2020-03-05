@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.account.order.OrderListActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            tools:ignore="MissingConstraints">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_4sdp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:cardElevation="@dimen/_1sdp"
+                    app:cardMaxElevation="@dimen/_1sdp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_6sdp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/linearDeliveryTime"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                fontPath="@string/medium"
+                                android:gravity="bottom"
+                                android:text="@string/txt_Order_ON"
+                                android:textColor="@color/text"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtDeliveryTime"
+                                android:gravity="bottom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                fontPath="@string/medium"
+                                android:paddingLeft="@dimen/_4sdp"
+                                android:text="Wed, 14 December"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_11sdp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                fontPath="@string/medium"
+                                android:gravity="bottom"
+                                android:text="@string/txt_OrderID"
+                                android:textColor="@color/text"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtOrderID"
+                                android:gravity="bottom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                fontPath="@string/medium"
+                                android:paddingLeft="@dimen/_4sdp"
+                                android:text="@string/dummy_orderid"
+                                android:textColor="@color/textdark"
+                                android:textSize="@dimen/_11sdp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.cardview.widget.CardView>
+
+                <com.youngershopping.view.kotlinview.stepview.SequenceLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sequenceLayout"
+                    android:layout_margin="@dimen/_8sdp"
+                    app:progressForegroundColor="@color/cartbudget"
+                    app:progressBackgroundColor="@color/linedark"
+                    tools:ignore="MissingConstraints"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_2sdp"
+                    app:cardElevation="@dimen/_1sdp"
+                    app:cardMaxElevation="@dimen/_1sdp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_6sdp"
+                        >
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="@dimen/_32sdp"
+                            android:layout_height="@dimen/_32sdp"
+                            android:id="@+id/imgDeliveryAddress"
+                            android:layout_gravity="center_vertical"
+                            app:srcCompat="@mipmap/address_home"/>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginLeft="@dimen/_6sdp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                fontPath="@string/semibold"
+                                android:text="@string/txt_DeliveryAddress"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                fontPath="@string/medium"
+                                android:text="@string/dummy_address1"
+                                android:textColor="@color/text"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

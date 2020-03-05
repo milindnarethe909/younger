@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.product.ProductReviewActivity">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    fontPath="@string/semibold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:text="@string/CustomerReview"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/txtAvgRating1"
+                                fontPath="@string/medium"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/dummy_avg_rating"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_16sdp" />
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="bottom"
+                                android:layout_marginLeft="@dimen/_2sdp"
+                                android:text="@string/TotalRatings"
+                                android:textColor="@color/text"
+                                android:textSize="@dimen/_12sdp" />
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_16sdp"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.LinearLayoutCompat
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/imgStar1"
+                                    android:layout_width="@dimen/_12sdp"
+                                    android:layout_height="@dimen/_12sdp"
+                                    app:srcCompat="@drawable/star_fill" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/imgStar2"
+                                    android:layout_width="@dimen/_12sdp"
+                                    android:layout_height="@dimen/_12sdp"
+                                    app:srcCompat="@drawable/star_fill" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/imgStar3"
+                                    android:layout_width="@dimen/_12sdp"
+                                    android:layout_height="@dimen/_12sdp"
+                                    app:srcCompat="@drawable/star_fill" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/imgStar4"
+                                    android:layout_width="@dimen/_12sdp"
+                                    android:layout_height="@dimen/_12sdp"
+                                    app:srcCompat="@drawable/star_fill" />
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/imgStar5"
+                                    android:layout_width="@dimen/_12sdp"
+                                    android:layout_height="@dimen/_12sdp"
+                                    app:srcCompat="@drawable/star_border" />
+
+                            </androidx.appcompat.widget.LinearLayoutCompat>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                fontPath="@string/medium"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:id="@+id/tvRatingReview"
+                                android:text="@string/CustomerReviewRating"
+                                android:textColor="@color/text"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="@color/linedark" />
+
+            <include
+                android:id="@+id/commanRecyclerview"
+                layout="@layout/comman_recyclerview_without_margin" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
