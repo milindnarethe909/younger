@@ -21,7 +21,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:allowBackup">
-        <activity android:name=".ui.home.ui1.fragment.Team_conditionActivity"></activity>
+        <activity android:name=".ui.home.ui2.ui.cart.DesignActivity"></activity>
+        <activity android:name=".ui.home.ui1.fragment.Team_conditionActivity" />
         <activity
             android:name=".ui.WalletActivity"
             android:screenOrientation="portrait" />

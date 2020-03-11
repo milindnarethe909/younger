@@ -82,6 +82,8 @@ public class CartFragment2 extends BaseAppFragment implements View.OnClickListen
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_cart2, container, false);
+        binding.relProgress.setVisibility(View.GONE);
+        binding.btnNext.setVisibility(View.GONE);
         apiInterface = APIClient.getClient().create(ApiInterface.class);
         init();
         setlistner();
@@ -141,7 +143,7 @@ public class CartFragment2 extends BaseAppFragment implements View.OnClickListen
                     binding.btApply.setEnabled(true);
                     binding.edCoupen.setCompoundDrawablesWithIntrinsicBounds(0, 0,0, 0);
 
-                }
+                   }
 
             }
 
@@ -161,6 +163,8 @@ public class CartFragment2 extends BaseAppFragment implements View.OnClickListen
                 list_cart_response cart_response = response.body();
                 String status = cart_response.getStatus();
                 if (status.equals("true")){
+                    binding.relProgress.setVisibility(View.VISIBLE);
+                    binding.btnNext.setVisibility(View.VISIBLE);
                     list = new ArrayList<>();
                     list.clear();
                     list = cart_response.getList_of_cart();
@@ -249,7 +253,7 @@ public class CartFragment2 extends BaseAppFragment implements View.OnClickListen
                         binding.cartFinalAmount.setVisibility(View.VISIBLE);
                         Log.d("TAG"," Next 3 = ");
                     }else if (step == 5){
-
+//                        startActivity(new Intent(getActivity(),DesignActivity.class));
                         Toast.makeText(getActivity(),""+payment_mode,Toast.LENGTH_SHORT).show();
                     }
                 }
