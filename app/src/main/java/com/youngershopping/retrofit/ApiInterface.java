@@ -61,7 +61,8 @@ public interface ApiInterface {
                                        @Field("license_qty") String license_qty,
                                        @Field("measure") String measure,
                                        @Field("photo") String photo,
-                                       @Field("gst") String gst
+                                       @Field("gst") String gst,
+                                       @Field("vendor_id") String vendor_id
                                        );
 
     @FormUrlEncoded

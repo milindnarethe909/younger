@@ -86,7 +86,7 @@ public class Balance_sheet_adapter extends RecyclerView.Adapter<Balance_sheet_ad
         holder.txtprice.setText(ofCart.getPrice()+" ₹");
         holder.txtqty.setText(ofCart.getQty());
         holder.txtsize.setText(ofCart.getSize());
-//            holder.txtcolor.setBackgroundColor(Color.parseColor(ofCart.getColor()));
+        holder.txtColor.setBackgroundColor(Color.parseColor(ofCart.getColor()));
         holder.txtgst.setText(ofCart.getGst()+" %");
         holder.txtShipping.setText(ofCart.getQty()+" * "+shipping_charges);
         double p = Double.parseDouble(ofCart.getPrice());    // Product Price
@@ -101,7 +101,7 @@ public class Balance_sheet_adapter extends RecyclerView.Adapter<Balance_sheet_ad
         double total = pq + tp + (q * s);
 
         holder.txts_totalP.setText(total+" ₹");
-        holder.txtProductName.setBackgroundColor(Color.parseColor("#000000"));
+        holder.txtProductName.setTextColor(Color.parseColor("#000000"));
 
 
 //            holder.txtSrNo.setBackgroundResource(R.drawable.table_content_cell_bg);
@@ -131,7 +131,7 @@ public class Balance_sheet_adapter extends RecyclerView.Adapter<Balance_sheet_ad
         TextView txtsize;
         TextView txtcolor,txtcolorhead;
         TextView txtgst;
-        TextView txts_totalP,txtShipping;
+        TextView txts_totalP,txtShipping,txtColor;
         LinearLayout ll_color;
         ImageView img;
 
@@ -149,6 +149,7 @@ public class Balance_sheet_adapter extends RecyclerView.Adapter<Balance_sheet_ad
 //            txtcolorhead = (TextView) itemView.findViewById(R.id.txtcolorhead);
             txtShipping = (TextView) itemView.findViewById(R.id.txtShipping);
             img = (ImageView) itemView.findViewById(R.id.img);
+            txtColor  = (TextView) itemView.findViewById(R.id.txtColor);
         }
     }
 }

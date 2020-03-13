@@ -255,23 +255,23 @@
                         android:padding="@dimen/_6sdp"
                         android:orientation="vertical">
 
-                        <HorizontalScrollView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:visibility="visible"
-                            >
+<!--                        <HorizontalScrollView-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            android:visibility="visible"-->
+<!--                            >-->
 
                             <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/recyclerViewMovieList"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:nestedScrollingEnabled="false"
-                                tools:listitem="@layout/table_list_item" />
+                                />
 
-                        </HorizontalScrollView>
+<!--                        </HorizontalScrollView>-->
 
                         <androidx.appcompat.widget.LinearLayoutCompat
                             android:layout_width="fill_parent"

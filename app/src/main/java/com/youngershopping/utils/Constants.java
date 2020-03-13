@@ -78,5 +78,7 @@ public class Constants {
 
     public static final String propulare_product = BASE_URL+"young_apie/index.php/get/get_popular_products";
 
+    public static final String product_place_order = "https://youngersshoppingclub.com/api/frontent/placeOrder";
+
 
 }

@@ -1,8 +1,11 @@
 package com.youngershopping.adapter.home;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Paint;
+import android.os.Handler;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +19,9 @@ import com.youngershopping.databinding.RawHomesaledataBinding;
 import com.youngershopping.ui.product.ProductDetailActivity;
 import com.youngershopping.utils.Utils;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -85,6 +90,50 @@ public class HomeDataSaleAdapter extends RecyclerView.Adapter<HomeDataSaleAdapte
                     activity.startActivity(intent);
                 }
             });
+            final String toyBornTime = "2020-03-12 12:00:00";
+            final Handler handler = new Handler();
+            Runnable runnable = new Runnable() {
+                @SuppressLint("SetTextI18n")
+                @Override
+                public void run() {
+                    handler.postDelayed(this, 1000);
+                    try {
+                        @SuppressLint("SimpleDateFormat") SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+                        // Please set date in  YYYY-MM-DD hh:mm:ss format
+                        /*parse endDateTime in future date*/
+                        Date futureDate = dateFormat.parse(toyBornTime);
+                        Date currentDate = new Date();
+                        Log.d("TAG","Date "+toyBornTime);
+                        /*if current date is not comes after future date*/
+                        if (!currentDate.after(futureDate)) {
+                            long diff = futureDate.getTime()
+                                    - currentDate.getTime();
+
+                            long days = diff / (24 * 60 * 60 * 1000);
+                            diff -= days *(24  *60 * 60  *1000);
+                            long hours = diff / (60 * 60*  1000);
+                            diff -= hours * (60*  60 * 1000);
+                            long minutes = diff / (60 * 1000);
+                            diff -= minutes * (60  *1000);
+                            long seconds = diff / 1000;
+                            @SuppressLint("DefaultLocale") String dayLeft = "" + String.format("%02d", days);
+                            @SuppressLint("DefaultLocale") String hrLeft = "" + String.format("%02d", hours);
+                            @SuppressLint("DefaultLocale") String minsLeft = "" + String.format("%02d", minutes);
+                            @SuppressLint("DefaultLocale") String secondLeft = "" + String.format("%02d", seconds);
+                            holder.binding.textSaleDate.setText(dayLeft + "D: "+hrLeft + "H: "+minsLeft + "M: "+secondLeft + "S");
+//                        hrsLeft.setText(hrLeft + "H: ");
+//                        minLeft.setText();
+//                        secLeft.setText();
+
+                        } else {
+//                        textViewGone();
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+            handler.postDelayed(runnable, 1000);
 
             Utils.TransitionalImageView(mListData.get(position),holder.binding.homedata.img,activity);
 
@@ -114,6 +163,9 @@ public class HomeDataSaleAdapter extends RecyclerView.Adapter<HomeDataSaleAdapte
         }
     }
 
+    public void countDownStart() {
+
+    }
 
 }
 

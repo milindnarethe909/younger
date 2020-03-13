@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.youngershopping.BaseApp;
 import com.youngershopping.R;
+import com.youngershopping.SharPref.SharePref;
 import com.youngershopping.adapter.account.order.OrderAdapter;
 import com.youngershopping.databinding.ActivityOrderBinding;
 import com.youngershopping.interfaces.ListItemClickInterface;
@@ -70,7 +71,7 @@ public class OrderListActivity extends BaseApp implements ListItemClickInterface
     }
 
     private void getOrderList() {
-        String user_id = "5";
+        String user_id = SharePref.getetLoginId("c_id",getApplicationContext());
         Call<order_list_respones> orderListResponesCall = apiInterface.getOderList(user_id);
         orderListResponesCall.enqueue(new Callback<order_list_respones>() {
             @Override

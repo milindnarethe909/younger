@@ -111,6 +111,7 @@ public class ProductDetailActivity extends BaseApp implements View.OnClickListen
     private HomeDataNewArrivalAdapter homeDataNewArrivalAdapter;
 
     ApiInterface apiInterface;
+    String vendor_id = "";
 
     String p_size = "",p_color = "",p_price = "",p_quantity = "",p_name = "",p_stock = "",p_c_price = "",p_id = "",p_photo = "",p_gst = "";
 
@@ -222,6 +223,7 @@ public class ProductDetailActivity extends BaseApp implements View.OnClickListen
                         produt_name = object1.getString("product_name");
 
                         p_gst = object1.getString("gst");
+                        vendor_id = object1.getString("vendor_id");
 
                         JSONArray jsonArray = object1.getJSONArray("sub_cat");
                         listslider = new ArrayList<>();
@@ -716,7 +718,7 @@ public class ProductDetailActivity extends BaseApp implements View.OnClickListen
     private void addCardData() {
         Log.d("TAG","GST = "+p_gst);
         Call<Add_To_Cart_Response> add = apiInterface.AddCart(SharePref.getetLoginId("c_id",getApplicationContext()),
-                p_quantity,p_size,p_color,p_stock,p_price,p_id,p_name,p_c_price,p_stock,"0","0","0","0","0","Units",p_photo,p_gst);
+                p_quantity,p_size,p_color,p_stock,p_price,p_id,p_name,p_c_price,p_stock,"0","0","0","0","0","Units",p_photo,p_gst,vendor_id);
         add.enqueue(new Callback<Add_To_Cart_Response>() {
             @Override
             public void onResponse(Call<Add_To_Cart_Response> call, retrofit2.Response<Add_To_Cart_Response> response) {

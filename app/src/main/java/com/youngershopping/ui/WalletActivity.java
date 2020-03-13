@@ -299,7 +299,7 @@ public class WalletActivity extends AppCompatActivity implements View.OnClickLis
         payUmoneyConfig.setDoneButtonText("Go to Dashboard");
 
         //Use this to set your custom title for the activity
-        payUmoneyConfig.setPayUmoneyActivityTitle("Make Payment");
+        payUmoneyConfig.setPayUmoneyActivityTitle("Younger Shopping Club");
 
         PayUmoneySdkInitializer.PaymentParam.Builder builder = new PayUmoneySdkInitializer.PaymentParam.Builder();
 
@@ -316,7 +316,7 @@ public class WalletActivity extends AppCompatActivity implements View.OnClickLis
         String productName = "Younger Shopping Club";
         String firstName = "Milind";
         String email = "milindnarethe909@gmail.com";
-        ;
+
         String udf1 = "";
         String udf2 = "";
         String udf3 = "";
